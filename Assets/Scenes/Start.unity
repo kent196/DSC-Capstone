@@ -274,8 +274,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.7045169}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 3.8397827}
-  m_SizeDelta: {x: -10, y: -47.6795}
+  m_AnchoredPosition: {x: 0, y: -3.7173}
+  m_SizeDelta: {x: -10, y: -32.5652}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &73043234
 GameObject:
@@ -428,7 +428,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 2
-  m_Text: This product belongs to team Game 1 of DSC FPT
+  m_Text: This product is developed by team Game 1 of DSC FPT
 --- !u!222 &110948224
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -855,8 +855,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: I'M FIRE
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: d497d6d70192f3a4986364f188037df9, type: 2}
-  m_sharedMaterial: {fileID: -8297584653286584201, guid: d497d6d70192f3a4986364f188037df9, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 09999e4bfa4af01438fe99de7fecff14, type: 2}
+  m_sharedMaterial: {fileID: 1077711676454308951, guid: 09999e4bfa4af01438fe99de7fecff14, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -880,8 +880,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 25
-  m_fontSizeBase: 25
+  m_fontSize: 40
+  m_fontSizeBase: 40
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -1146,7 +1146,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.20328456}
   m_AnchorMax: {x: 1, y: 0.4038576}
-  m_AnchoredPosition: {x: 0, y: 0.47698975}
+  m_AnchoredPosition: {x: 0, y: 0.47698212}
   m_SizeDelta: {x: 0, y: -0.000015258789}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1580297350
@@ -1635,8 +1635,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: -600, y: 0}
+  m_AnchoredPosition: {x: -286, y: -85}
+  m_SizeDelta: {x: -600, y: -199.2532}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1758208278
 GameObject:
