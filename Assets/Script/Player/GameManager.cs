@@ -6,8 +6,13 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     public static GameManager gameManager { get; private set; }
-
     public HealthStats playerHealth = new HealthStats(100, 100);
+    public static bool GameIsPaused = false;
+    public static bool GameHasEnded = false;
+    [SerializeField] public GameObject pauseMenu;
+    [SerializeField] public GameObject confirmBox;
+    [SerializeField] public GameObject gui;
+    [SerializeField] private GameObject endMenu;
 
     private void Awake()
     {
@@ -23,12 +28,6 @@ public class GameManager : MonoBehaviour
 
 
 
-    public static bool GameIsPaused = false;
-    public static bool GameHasEnded = false;
-    [SerializeField] public GameObject pauseMenu;
-    [SerializeField] public GameObject confirmBox;
-    [SerializeField] public GameObject gui;
-    [SerializeField] private GameObject endMenu;
 
     private void Start()
     {
@@ -44,6 +43,12 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        HandlePauseGame();
+
+    }
+
+    public void HandlePauseGame()
+    {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
 
@@ -56,8 +61,6 @@ public class GameManager : MonoBehaviour
                 PauseGame();
             }
         }
-
-
     }
 
 

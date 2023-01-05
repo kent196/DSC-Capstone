@@ -374,7 +374,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8653000892469763380, guid: a9929b2edabc21042a6bcd95e82a70eb, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0.000015258789
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8653000892557989433, guid: a9929b2edabc21042a6bcd95e82a70eb, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -744,6 +744,10 @@ PrefabInstance:
       value: UIBehavior, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 3332244677931489185, guid: c247b4af64e383d489df266fd521f8fa, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -0.000061035156
+      objectReference: {fileID: 0}
+    - target: {fileID: 3332244677931489185, guid: c247b4af64e383d489df266fd521f8fa, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -0.000061035156
       objectReference: {fileID: 0}
@@ -994,14 +998,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1802400013}
     m_Modifications:
-    - target: {fileID: 1153402016389829567, guid: 78292cbb5569de14c802879994a57e12, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: -0.000015258789
-      objectReference: {fileID: 0}
-    - target: {fileID: 3168448692933258689, guid: 78292cbb5569de14c802879994a57e12, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -0.0000009536743
-      objectReference: {fileID: 0}
     - target: {fileID: 3168448693477042907, guid: 78292cbb5569de14c802879994a57e12, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -1098,21 +1094,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: GUI
       objectReference: {fileID: 0}
-    - target: {fileID: 3168448694654722380, guid: 78292cbb5569de14c802879994a57e12, type: 3}
+    - target: {fileID: 7273412590491669352, guid: 78292cbb5569de14c802879994a57e12, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7273412590491669352, guid: 78292cbb5569de14c802879994a57e12, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8133251109764642883, guid: 78292cbb5569de14c802879994a57e12, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1802400014}
-    - target: {fileID: 3168448694654722380, guid: 78292cbb5569de14c802879994a57e12, type: 3}
+    - target: {fileID: 8133251109764642883, guid: 78292cbb5569de14c802879994a57e12, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: PauseGame
-      objectReference: {fileID: 0}
-    - target: {fileID: 3168448694654722380, guid: 78292cbb5569de14c802879994a57e12, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: UIBehavior, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 8442448612650469643, guid: 78292cbb5569de14c802879994a57e12, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -0.0000019073486
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 78292cbb5569de14c802879994a57e12, type: 3}

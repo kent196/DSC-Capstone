@@ -15,7 +15,9 @@ public class PlayerBehaviour : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Space))
         {
+
             TakeDamage(20);
+            Debug.Log("Space key was pressed.");
         }
 
     }
