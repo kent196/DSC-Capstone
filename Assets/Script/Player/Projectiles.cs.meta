@@ -1,9 +1,5 @@
 fileFormatVersion: 2
-<<<<<<<< HEAD:Assets/Script/Menu/EndMenu.cs.meta
-guid: f82c0c5492d028b49807a4a4a5ec66ec
-========
-guid: 0a2491a22f9e1cb48befd0353e6899ac
->>>>>>>> origin/tuan:Assets/Script/Player/FlowerAttack.cs.meta
+guid: b17484ad4b6e6564db7d71127360771e
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
