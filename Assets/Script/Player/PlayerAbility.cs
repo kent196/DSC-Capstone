@@ -4,82 +4,42 @@ using UnityEngine;
 
 public class PlayerAbility : MonoBehaviour
 {
+    [SerializeField] private Transform meeleAttackPoint;
     [SerializeField] private GameObject projectile;
-    [SerializeField] private Transform rotatePoint;
+    [SerializeField] private LayerMask enemyLayers;
 
-    private Vector2 aimLineStart;
-    private Vector2 aimLineEnd;
-    private Vector2 rotatePosition;
-    private Vector2 mousePosition;
-    private Vector2 fireDirection;
-
-    private float angle;
-    private float launchForce = 10f;
-    private float attackTimer;
-
-    private LineRenderer lr;
-
+    private Collider2D[] hitEnemies;
+    private float meeleAttackRange;
 
     // Start is called before the first frame update
     void Start()
     {
-        lr = GetComponent<LineRenderer>();
-        attackTimer = 0f;
+         
     }
 
     // Update is called once per frame
     void Update()
     {
         
-        attackTimer -= Time.deltaTime;
-        GetDirection();
-        if (attackTimer < .1f)
-        {
-            RangeAttack();
-
-        }
     }
-    void GetDirection()
+
+/*    void MeeleAttack()
     {
-        
-        rotatePosition = rotatePoint.position;
-        mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        if (Input.GetKeyDown(KeyCode.J))
+        {
+            hitEnemies = Physics2D.OverlapCircleAll(meeleAttackPoint.position,meeleAttackRange,enemyLayers);
+            foreach(Collider2D enemy in hitEnemies)
+            {
+                Debug.Log("enemy take damage method");
+            }
+        }
+    }*/
 
-        fireDirection = mousePosition - rotatePosition;
-        fireDirection.Normalize();
-
-        angle = Mathf.Atan2(fireDirection.y, fireDirection.x) * Mathf.Rad2Deg;
-        rotatePoint.rotation = Quaternion.Euler(0, 0, angle);
-    }
     void RangeAttack()
     {
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetKeyDown(KeyCode.K))
         {
-            lr.enabled = true;
-        }
-        if (Input.GetMouseButton(0))
-        {
-            lr.enabled = true;
-            aimLineStart = rotatePoint.position;
-            lr.SetPosition(0, aimLineStart);
-            aimLineEnd = rotatePoint.Find("FirePoint").position;
-            lr.SetPosition(1, aimLineEnd);
-        }
-
-        if (Input.GetMouseButtonUp(0))
-        {
-            //Mouse up, launch
-            LaunchProjectile();
-            lr.enabled = false;
-        }
-    }
-    void LaunchProjectile()
-    {
-        if (attackTimer < .1f)
-        {
-            GameObject newProjectile = Instantiate(projectile, rotatePoint.Find("FirePoint").position, rotatePoint.rotation);
-            newProjectile.GetComponent<Rigidbody2D>().velocity = rotatePoint.Find("FirePoint").right * launchForce;
-            attackTimer = 1f;
+            Instantiate(projectile,transform.position,transform.rotation);
         }
     }
 }
