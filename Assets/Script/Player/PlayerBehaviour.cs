@@ -4,36 +4,19 @@ using UnityEngine;
 
 public class PlayerBehaviour : MonoBehaviour
 {
-    public HealthBar healthBar;
-    private void Start()
-    {
-        healthBar.SetMaxHealth(GameManager.gameManager.playerHealth.MaxHealth);
 
-    }
     private void Update()
     {
-
         if (Input.GetKeyDown(KeyCode.Space))
         {
-
             TakeDamage(20);
-            Debug.Log("Space key was pressed.");
+            Debug.Log(GameManager.gameManager.playerHealth.Health);
         }
-
     }
-
-
-
     private void TakeDamage(int dmgAmount)
     {
         //some conditon
         GameManager.gameManager.playerHealth.DamageUnit(dmgAmount);
-        healthBar.SetHealth(GameManager.gameManager.playerHealth.Health);
-        if (GameManager.gameManager.playerHealth.Health <= 0)
-        {
-            Debug.Log("Player is dead");
-            GameManager.gameManager.EndGame();
-        }
 
     }
 
