@@ -1,18 +1,21 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
     public static GameManager gameManager { get; private set; }
-    public HealthStats playerHealth = new HealthStats(100, 100);
+    public HealthStats playerHealth;
     public static bool GameIsPaused = false;
     public static bool GameHasEnded = false;
     [SerializeField] public GameObject pauseMenu;
     [SerializeField] public GameObject confirmBox;
     [SerializeField] public GameObject gui;
     [SerializeField] private GameObject endMenu;
+
+
 
     private void Awake()
     {
@@ -38,6 +41,7 @@ public class GameManager : MonoBehaviour
         gui = FindObjectOfType<Canvas>().transform.Find("GUI").gameObject;
         endMenu = FindObjectOfType<Canvas>().transform.Find("EndMenu").gameObject;
         endMenu.SetActive(false);
+        playerHealth = new HealthStats(100, 100);
     }
 
     // Update is called once per frame
@@ -87,6 +91,7 @@ public class GameManager : MonoBehaviour
     {
         Debug.Log("Confirm");
         confirmBox.SetActive(true);
+        pauseMenu.SetActive(false);
     }
 
     public void ConfirmYes()
@@ -97,6 +102,7 @@ public class GameManager : MonoBehaviour
     public void ConfirmNo()
     {
         confirmBox.SetActive(false);
+        pauseMenu.SetActive(true);
     }
 
     public void EndGame()
@@ -112,6 +118,7 @@ public class GameManager : MonoBehaviour
 
     public void Restart()
     {
+        Time.timeScale = 1f;
         GameHasEnded = false;
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
