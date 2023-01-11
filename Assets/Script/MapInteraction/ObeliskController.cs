@@ -7,6 +7,7 @@ public class ObeliskController : MonoBehaviour
     private Animator anim;
 
 
+
     private void Start()
     {
         anim = GetComponent<Animator>();
@@ -17,11 +18,8 @@ public class ObeliskController : MonoBehaviour
 
         if (collision.gameObject.CompareTag("Player"))
         {
-            anim.Play("ObeliskUp");
-
-
+            anim.SetTrigger("isActivated");
+            anim.SetBool("isOperating", true);
         }
     }
-
-
 }
