@@ -30,7 +30,7 @@ public class PlayerAbility : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
         attackTimer -= Time.deltaTime;
         GetDirection();
         if (attackTimer < .1f)
@@ -41,7 +41,7 @@ public class PlayerAbility : MonoBehaviour
     }
     void GetDirection()
     {
-        
+
         rotatePosition = rotatePoint.position;
         mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
 
@@ -62,7 +62,7 @@ public class PlayerAbility : MonoBehaviour
             lr.enabled = true;
             aimLineStart = rotatePoint.position;
             lr.SetPosition(0, aimLineStart);
-            aimLineEnd = rotatePoint.Find("FirePoint").position;
+            aimLineEnd = rotatePoint.Find("Fire point").position;
             lr.SetPosition(1, aimLineEnd);
         }
 
@@ -77,8 +77,8 @@ public class PlayerAbility : MonoBehaviour
     {
         if (attackTimer < .1f)
         {
-            GameObject newProjectile = Instantiate(projectile, rotatePoint.Find("FirePoint").position, rotatePoint.rotation);
-            newProjectile.GetComponent<Rigidbody2D>().velocity = rotatePoint.Find("FirePoint").right * launchForce;
+            GameObject newProjectile = Instantiate(projectile, rotatePoint.Find("Fire point").position, rotatePoint.rotation);
+            newProjectile.GetComponent<Rigidbody2D>().velocity = rotatePoint.Find("Fire point").right * launchForce;
             attackTimer = 1f;
         }
     }

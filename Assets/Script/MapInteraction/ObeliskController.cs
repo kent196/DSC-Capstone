@@ -18,6 +18,10 @@ public class ObeliskController : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             anim.Play("ObeliskUp");
+
+
         }
     }
+
+
 }
