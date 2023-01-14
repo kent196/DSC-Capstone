@@ -23,7 +23,7 @@ public class PlayerBehaviour : MonoBehaviour
             }
         }
     }
-    private void TakeDamage(int dmgAmount)
+    public void TakeDamage(int dmgAmount)
     {
         //some conditon
         GameManager.gameManager.playerHealth.DamageUnit(dmgAmount);
@@ -31,7 +31,7 @@ public class PlayerBehaviour : MonoBehaviour
 
     }
 
-    private void Heal(int healAmount)
+    public void Heal(int healAmount)
     {
         //some condition
         GameManager.gameManager.playerHealth.HealUnit(healAmount);

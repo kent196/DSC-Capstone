@@ -6,6 +6,7 @@ public class PlayerAbility : MonoBehaviour
 {
     [SerializeField] private GameObject projectile;
     [SerializeField] private Transform rotatePoint;
+    private PlayerBehaviour playerBehaviour;
 
     private Vector2 aimLineStart;
     private Vector2 aimLineEnd;
@@ -23,6 +24,7 @@ public class PlayerAbility : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        playerBehaviour = FindObjectOfType<PlayerBehaviour>();
         lr = GetComponent<LineRenderer>();
         attackTimer = 0f;
     }
@@ -77,8 +79,9 @@ public class PlayerAbility : MonoBehaviour
     {
         if (attackTimer < .1f)
         {
-            GameObject newProjectile = Instantiate(projectile, rotatePoint.Find("Fire point").position, rotatePoint.rotation);
-            newProjectile.GetComponent<Rigidbody2D>().velocity = rotatePoint.Find("Fire point").right * launchForce;
+            playerBehaviour.TakeDamage(5);
+            GameObject newProjectile = Instantiate(projectile, rotatePoint.Find("Firepoint").position, rotatePoint.rotation);
+            newProjectile.GetComponent<Rigidbody2D>().velocity = rotatePoint.Find("Firepoint").right * launchForce;
             attackTimer = 1f;
         }
     }
