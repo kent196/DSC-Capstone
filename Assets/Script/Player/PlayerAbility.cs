@@ -80,8 +80,8 @@ public class PlayerAbility : MonoBehaviour
         if (attackTimer < .1f)
         {
             playerBehaviour.TakeDamage(5);
-            GameObject newProjectile = Instantiate(projectile, rotatePoint.Find("Firepoint").position, rotatePoint.rotation);
-            newProjectile.GetComponent<Rigidbody2D>().velocity = rotatePoint.Find("Firepoint").right * launchForce;
+            GameObject newProjectile = Instantiate(projectile, rotatePoint.Find("Fire point").position, rotatePoint.rotation);
+            newProjectile.GetComponent<Rigidbody2D>().velocity = rotatePoint.Find("Fire point").right * launchForce;
             attackTimer = 1f;
         }
     }
