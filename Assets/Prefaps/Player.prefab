@@ -55,7 +55,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 410271251}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: -0.178, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -3744,7 +3744,7 @@ ParticleSystem:
   CollisionModule:
     enabled: 1
     serializedVersion: 4
-    type: 1
+    type: 0
     collisionMode: 1
     colliderForce: 0
     multiplyColliderForceByParticleSize: 0
@@ -4956,9 +4956,11 @@ GameObject:
   - component: {fileID: 4578349420997085899}
   - component: {fileID: 732354655}
   - component: {fileID: 732354654}
+  - component: {fileID: 4286255526261984424}
+  - component: {fileID: 1291815731}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5055,7 +5057,7 @@ LineRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 0}
+  - {fileID: 10301, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -5087,9 +5089,18 @@ LineRenderer:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 0.078947365
+        value: 0.36842185
         inSlope: 0
         outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.6495936
+        value: 0.24901915
+        inSlope: -0.55155814
+        outSlope: -0.55155814
         tangentMode: 0
         weightedMode: 0
         inWeight: 0.33333334
@@ -5108,8 +5119,8 @@ LineRenderer:
       m_RotationOrder: 4
     colorGradient:
       serializedVersion: 2
-      key0: {r: 0, g: 0, b: 0, a: 1}
-      key1: {r: 0, g: 0, b: 0, a: 1}
+      key0: {r: 1, g: 1, b: 1, a: 1}
+      key1: {r: 1, g: 1, b: 1, a: 1}
       key2: {r: 0, g: 0, b: 0, a: 0}
       key3: {r: 0, g: 0, b: 0, a: 0}
       key4: {r: 0, g: 0, b: 0, a: 0}
@@ -5155,8 +5166,33 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a40ca0178ceec7747a0870eaf433ca94, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  projectile: {fileID: 0}
+  projectile: {fileID: 3593573560901785179, guid: 6dae04d8692be78489fdfa6d9afa001c, type: 3}
   rotatePoint: {fileID: 410271252}
+--- !u!114 &4286255526261984424
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4578349420997085892}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 655879d66d957e740ae15bcd06a50e01, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  healthBar: {fileID: 0}
+--- !u!114 &1291815731
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4578349420997085892}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a0367870f18849498274f5ecd9ff26a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4578349421973724803
 GameObject:
   m_ObjectHideFlags: 0
@@ -8838,7 +8874,7 @@ ParticleSystem:
   CollisionModule:
     enabled: 1
     serializedVersion: 4
-    type: 1
+    type: 0
     collisionMode: 1
     colliderForce: 0
     multiplyColliderForceByParticleSize: 0

@@ -10,19 +10,26 @@ public class PlayerBehaviour : MonoBehaviour
         healthBar = FindObjectOfType<HealthBar>();
     }
 
-    private void Update()
+    private void FixedUpdate()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        //if (Input.GetKeyDown(KeyCode.Space))
+        //{
+        //    TakeDamage(20);
+        //    Debug.Log(GameManager.gameManager.playerHealth.Health);
+        //    healthBar.SetHealth(GameManager.gameManager.playerHealth.Health);
+        //    if (GameManager.gameManager.playerHealth.Health == 0)
+        //    {
+        //        GameManager.gameManager.EndGame();
+        //    }
+        //}
+        healthBar.SetHealth(GameManager.gameManager.playerHealth.Health);
+        if (GameManager.gameManager.playerHealth.Health == 0)
         {
-            TakeDamage(20);
-            Debug.Log(GameManager.gameManager.playerHealth.Health);
-            healthBar.SetHealth(GameManager.gameManager.playerHealth.Health);
-            if (GameManager.gameManager.playerHealth.Health == 0)
-            {
-                GameManager.gameManager.EndGame();
-            }
+            GameManager.gameManager.EndGame();
         }
     }
+
+
     public void TakeDamage(int dmgAmount)
     {
         //some conditon
