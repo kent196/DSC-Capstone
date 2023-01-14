@@ -22,17 +22,14 @@ public class PlayerBehaviour : MonoBehaviour
         //        GameManager.gameManager.EndGame();
         //    }
         //}
-        UpdateHealthBar();
-    }
-
-    public void UpdateHealthBar()
-    {
         healthBar.SetHealth(GameManager.gameManager.playerHealth.Health);
         if (GameManager.gameManager.playerHealth.Health == 0)
         {
             GameManager.gameManager.EndGame();
         }
     }
+
+
     public void TakeDamage(int dmgAmount)
     {
         //some conditon

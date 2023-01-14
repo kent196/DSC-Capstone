@@ -92,6 +92,7 @@ public class GameManager : MonoBehaviour
         Debug.Log("Confirm");
         confirmBox.SetActive(true);
         pauseMenu.SetActive(false);
+        endMenu.SetActive(false);
     }
 
     public void ConfirmYes()

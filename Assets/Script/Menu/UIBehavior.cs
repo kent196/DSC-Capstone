@@ -39,4 +39,6 @@ public class UIBehavior : MonoBehaviour
         GameManager.gameManager.ConfirmNo();
 
     }
+
+
 }
