@@ -23,4 +23,22 @@ public class UIBehavior : MonoBehaviour
     {
         GameManager.gameManager.Restart();
     }
+
+    public void ExitToMenu()
+    {
+        GameManager.gameManager.ExitToMenu();
+    }
+
+    public void ConfirmYes()
+    {
+        GameManager.gameManager.ConfirmYes();
+    }
+
+    public void ConfirmNo()
+    {
+        GameManager.gameManager.ConfirmNo();
+
+    }
+
+
 }
