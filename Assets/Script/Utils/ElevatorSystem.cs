@@ -10,6 +10,9 @@ public class ElevatorSystem : MonoBehaviour
 
     [SerializeField] private float elevatorSpeed = 2f;
 
+    public GameObject player;
+
+    private bool isWaiting = false;
     // Update is called once per frame
     void Update()
     {
@@ -17,37 +20,84 @@ public class ElevatorSystem : MonoBehaviour
         {
             Moving();
         }
+        UpdatePlayerPosition();
+    }
+
+    void UpdatePlayerPosition()
+    {
+        if (player == null)
+        {
+            return;
+        }
+        if (player.transform.parent == transform)
+        {
+            player.transform.localPosition = new Vector3(player.transform.localPosition.x, player.transform.localPosition.y, 0);
+        }
     }
 
     void Moving()
     {
-        if (Vector2.Distance(waypoints[currentWaypointIndex].transform.position, transform.position) < .1f)
+        if (!isWaiting)
         {
-            elevatorActivated = false;
-            currentWaypointIndex++;
-            if (currentWaypointIndex >= waypoints.Length)
+            transform.position = Vector2.MoveTowards(transform.position, waypoints[currentWaypointIndex].transform.position, elevatorSpeed * Time.deltaTime);
+            if (Vector2.Distance(waypoints[currentWaypointIndex].transform.position, transform.position) < .1f)
             {
-                currentWaypointIndex = 0;
+                StartCoroutine(Delay());
             }
         }
-
-        transform.position = Vector2.MoveTowards(transform.position, waypoints[currentWaypointIndex].transform.position, elevatorSpeed * Time.deltaTime);
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    IEnumerator Delay()
     {
-        if (collision.gameObject.name == "Player")
+        isWaiting = true;
+        yield return new WaitForSeconds(2f);
+        currentWaypointIndex++;
+        if (currentWaypointIndex >= waypoints.Length)
         {
+            currentWaypointIndex = 0;
+        }
+        isWaiting = false;
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+
+        if (collision.collider.CompareTag("Player"))
+        {
+            player = collision.gameObject;
             collision.gameObject.transform.SetParent(transform);
             elevatorActivated = true;
         }
     }
 
-    private void OnTriggerExit2D(Collider2D collision)
+    private void OnCollisionExit2D(Collision2D collision)
     {
-        if (collision.gameObject.name == "Player")
+
+        if (collision.collider.CompareTag("Player"))
         {
             collision.gameObject.transform.SetParent(null);
+            player = null;
         }
     }
+
+    // void UpdatePlayerPosition()
+    // {
+    //     if (player==null){
+    //         return;
+    //     }
+    //     else{
+    //         Debug.Log("DAY LA LOI CUA BAO");
+    //     }
+
+
+
+    //     if (player.transform.parent == transform)
+    //     {
+    //         player.transform.localPosition = new Vector3(player.transform.localPosition.x, player.transform.localPosition.y, 0);
+    //     }
+    // }
+
+
+
+
 }
