@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - Enemy
+  - Fireball
+  - Smoke
+  - Heal Flower
   layers:
   - Default
   - TransparentFX
@@ -12,7 +15,7 @@ TagManager:
   - Platform
   - Water
   - UI
-  - 
+  - Fireball
   - 
   - 
   - 
