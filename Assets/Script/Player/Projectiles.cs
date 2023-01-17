@@ -18,6 +18,7 @@ public class Projectiles : MonoBehaviour
     void Update()
     {
         TrackDirection();
+        
     }
     void TrackDirection()
     {
@@ -32,9 +33,7 @@ public class Projectiles : MonoBehaviour
         if (collision.gameObject.layer != 9 && this.CompareTag("Fireball"))
         {
             hasHit = true;
-
             anim.Play("Explode");
-
             rb.isKinematic = true;
             rb.velocity = Vector2.zero;
             this.GetComponent<Collider2D>().isTrigger = true;

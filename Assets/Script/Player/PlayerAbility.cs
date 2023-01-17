@@ -27,6 +27,7 @@ public class PlayerAbility : MonoBehaviour
         playerBehaviour = FindObjectOfType<PlayerBehaviour>();
         lr = GetComponent<LineRenderer>();
         attackTimer = 0f;
+        
     }
 
     // Update is called once per frame
