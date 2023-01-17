@@ -83,6 +83,7 @@ public class PlayerAbility : MonoBehaviour
             playerBehaviour.TakeDamage(5);
             GameObject newProjectile = Instantiate(projectile, rotatePoint.Find("Fire point").position, rotatePoint.rotation);
             newProjectile.GetComponent<Rigidbody2D>().velocity = rotatePoint.Find("Fire point").right * launchForce;
+            Physics2D.IgnoreCollision(newProjectile.GetComponent<Collider2D>(), projectile.GetComponent<Collider2D>());
             attackTimer = 1f;
         }
     }
