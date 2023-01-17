@@ -34,8 +34,6 @@ public class PlayerBehaviour : MonoBehaviour
     {
         //some conditon
         GameManager.gameManager.playerHealth.DamageUnit(dmgAmount);
-
-
     }
 
     public void Heal(int healAmount)
