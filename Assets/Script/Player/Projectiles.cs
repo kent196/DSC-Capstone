@@ -29,12 +29,23 @@ public class Projectiles : MonoBehaviour
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.layer != 9)
+        if (collision.gameObject.layer != 9 && this.CompareTag("fireball"))
         {
             hasHit = true;
+
             anim.Play("Explode");
+
             rb.isKinematic = true;
             rb.velocity = Vector2.zero;
+            this.GetComponent<Collider2D>().isTrigger = true;
+            Destroy(gameObject, 1f);
+        }
+        else if(collision.gameObject.layer != 9)
+        {
+            hasHit = true;
+            rb.isKinematic = true;
+            rb.velocity = Vector2.zero;
+            this.GetComponent<Collider2D>().isTrigger = true;
             Destroy(gameObject, 1f);
         }
     }
