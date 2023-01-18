@@ -6,11 +6,11 @@ public class ObeliskController : MonoBehaviour
 {
     private Animator anim;
 
-
+    [SerializeField] private bool obeliskOperating = false;
 
     private void Start()
     {
-        anim = GetComponent<Animator>();
+        anim = GetComponent<Animator>();    
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -21,6 +21,12 @@ public class ObeliskController : MonoBehaviour
         {
             anim.SetTrigger("isActivated");
             anim.SetBool("isOperating", true);
+            obeliskOperating = true;
         }
+    }
+
+    public bool getObeliskState()
+    {
+        return obeliskOperating;
     }
 }
