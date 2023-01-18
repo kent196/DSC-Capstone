@@ -22,11 +22,11 @@ public class Spider : MonoBehaviour
     {
         spiderPos = transform.position;
 
-        if(isPlayerInLookZone())
+        if (isPlayerInLookZone())
         {
             animator.SetTrigger("active");
         }
-        else 
+        else
         {
             animator.SetTrigger("unactive");
         }
@@ -34,12 +34,12 @@ public class Spider : MonoBehaviour
 
     public bool isPlayerInLookZone()
     {
-        RaycastHit2D hitInfo = Physics2D.BoxCast(homePos, lookRange, 0 , Vector2.left, 10f, playerLayer);
-        if(hitInfo)
+        RaycastHit2D hitInfo = Physics2D.BoxCast(homePos, lookRange, 0, Vector2.left, 10f, playerLayer);
+        if (hitInfo)
         {
             return true;
         }
-        else 
+        else
         {
             return false;
         }
@@ -47,12 +47,12 @@ public class Spider : MonoBehaviour
 
     public bool isPlayerInAttackZone()
     {
-        RaycastHit2D hitInfo = Physics2D.BoxCast(spiderPos, attackRange, 0 , Vector2.left, 10f, playerLayer);
-        if(hitInfo)
+        RaycastHit2D hitInfo = Physics2D.BoxCast(spiderPos, attackRange, 0, Vector2.left, 10f, playerLayer);
+        if (hitInfo)
         {
             return true;
         }
-        else 
+        else
         {
             return false;
         }
@@ -63,9 +63,15 @@ public class Spider : MonoBehaviour
         Gizmos.color = Color.yellow;
         Gizmos.DrawWireCube(homePos, lookRange);
 
-        
+
         Gizmos.color = Color.white;
         Gizmos.DrawWireCube(spiderPos, attackRange);
     }
-    
+
+    public void TakeDamage(int dmg)
+    {
+        Debug.Log("Spider took damage");
+        //GameManager.gameManager.
+    }
+
 }

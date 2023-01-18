@@ -39,7 +39,7 @@ public class Projectiles : MonoBehaviour
             this.GetComponent<Collider2D>().isTrigger = true;
             Destroy(gameObject, 1f);
         }
-        else if(collision.gameObject.layer != 9)
+        else if (collision.gameObject.layer != 9)
         {
             hasHit = true;
             rb.isKinematic = true;
@@ -47,6 +47,12 @@ public class Projectiles : MonoBehaviour
             this.GetComponent<Collider2D>().isTrigger = true;
             Destroy(gameObject, 1f);
         }
+        else if (collision.gameObject.CompareTag("Enemy"))
+        {
+            collision.gameObject.GetComponent<Spider>().TakeDamage(10);
+        }
     }
+
+
 
 }
