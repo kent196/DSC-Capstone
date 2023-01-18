@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Enemy
   - Fireball
+  - Smoke
+  - Spider
   layers:
   - Default
   - TransparentFX
@@ -13,13 +15,13 @@ TagManager:
   - Platform
   - Water
   - UI
-  - Bullet
+  - 
   - 
   - 
   - 
   - Player
   - Enemy
-  - 
+  - Bullet
   - 
   - 
   - Fire Effect

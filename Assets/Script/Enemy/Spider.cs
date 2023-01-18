@@ -2,8 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Spider : Enemy
+public class Spider : MonoBehaviour
 {
+    [SerializeField] public float moveSpeed = 10f;
+    [SerializeField] public int damage = 10;
+    private int maxHealth;
+    private int health;
     [SerializeField] public LayerMask playerLayer;
     [SerializeField] public Vector3 lookRange = new Vector3(10f, 2f, 1f);
     [HideInInspector] public Vector3 currentLookRange;
@@ -24,6 +28,10 @@ public class Spider : Enemy
         homePos = transform.position;
         animator = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
+
+        health = GameManager.gameManager.spiderHealth.Health;
+        maxHealth = GameManager.gameManager.spiderHealth.MaxHealth;
+        Debug.Log(health);
     }
 
     // Update is called once per frame
@@ -84,10 +92,16 @@ public class Spider : Enemy
         }
     }
 
-    private void OnTriggerEnter2D(Collider2D other) {
-        if(other.CompareTag("Fireball"))
+    private void OnCollisionEnter2D(Collision2D other) {
+        if(other.gameObject.CompareTag("Fireball"))
         {
             animator.SetTrigger("hit");
         }
+    }
+
+    public void TakeDamage(int dmg)
+    {
+        health -= dmg;
+        Debug.Log(health);
     }
 }
