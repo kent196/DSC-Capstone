@@ -27,16 +27,18 @@ public class Projectiles : MonoBehaviour
             transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
         }
     }
-    private void OnCollisionEnter2D(Collision2D collision)
+
+    void OnTriggerEnter2D(Collider2D other)
     {
-        if (collision.gameObject.layer != 9)
-        {
-            hasHit = true;
-            anim.Play("Explode");
-            rb.isKinematic = true;
-            rb.velocity = Vector2.zero;
-            Destroy(gameObject, 1f);
-        }
+        hasHit = true;
+        anim.Play("Explode");
+        rb.isKinematic = true;
+        rb.velocity = Vector2.zero;
+    }
+
+    public void Destroy()
+    {
+        Destroy(gameObject);
     }
 
 }
