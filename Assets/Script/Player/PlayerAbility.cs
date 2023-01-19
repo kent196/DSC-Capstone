@@ -27,7 +27,7 @@ public class PlayerAbility : MonoBehaviour
         playerBehaviour = FindObjectOfType<PlayerBehaviour>();
         lr = GetComponent<LineRenderer>();
         attackTimer = 0f;
-        
+
     }
 
     // Update is called once per frame
@@ -44,15 +44,11 @@ public class PlayerAbility : MonoBehaviour
     }
     void GetDirection()
     {
-
         rotatePosition = rotatePoint.position;
         mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-
         fireDirection = mousePosition - rotatePosition;
         fireDirection.Normalize();
-
-        angle = Mathf.Atan2(fireDirection.y, fireDirection.x) * Mathf.Rad2Deg;
-        rotatePoint.rotation = Quaternion.Euler(0, 0, angle);
+        rotatePoint.right = fireDirection;
     }
     void RangeAttack()
     {
@@ -81,9 +77,8 @@ public class PlayerAbility : MonoBehaviour
         if (attackTimer < .1f)
         {
             playerBehaviour.TakeDamage(5);
-            GameObject newProjectile = Instantiate(projectile, rotatePoint.Find("Fire point").position, rotatePoint.rotation);
-            newProjectile.GetComponent<Rigidbody2D>().velocity = rotatePoint.Find("Fire point").right * launchForce;
-            Physics2D.IgnoreCollision(newProjectile.GetComponent<Collider2D>(), projectile.GetComponent<Collider2D>());
+            GameObject newProjectile = Instantiate(projectile, rotatePoint.position, rotatePoint.rotation);
+            newProjectile.GetComponent<Rigidbody2D>().velocity = rotatePoint.right * launchForce;
             attackTimer = 1f;
         }
     }

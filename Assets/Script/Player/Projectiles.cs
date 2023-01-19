@@ -30,7 +30,8 @@ public class Projectiles : MonoBehaviour
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.layer != 9 && this.CompareTag("Fireball"))
+        Debug.Log(collision.gameObject.name);
+        if (this.CompareTag("Fireball"))
         {
             hasHit = true;
             anim.Play("Explode");
