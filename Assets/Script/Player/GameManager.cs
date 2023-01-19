@@ -8,6 +8,7 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager gameManager { get; private set; }
     public HealthStats playerHealth;
+    public HealthStats spiderHealth;
     public static bool GameIsPaused = false;
     public static bool GameHasEnded = false;
     [SerializeField] public GameObject pauseMenu;
@@ -42,6 +43,7 @@ public class GameManager : MonoBehaviour
         endMenu = FindObjectOfType<Canvas>().transform.Find("EndMenu").gameObject;
         endMenu.SetActive(false);
         playerHealth = new HealthStats(100, 100);
+        spiderHealth = new HealthStats(50, 50);
     }
 
     // Update is called once per frame
