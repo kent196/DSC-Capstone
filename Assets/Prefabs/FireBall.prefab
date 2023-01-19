@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 3593573560901785191}
   - component: {fileID: 3593573560901785190}
   - component: {fileID: 3593573560901785189}
-  m_Layer: 11
+  m_Layer: 12
   m_Name: FireBall
   m_TagString: Fireball
   m_Icon: {fileID: 0}
@@ -128,7 +128,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 4
+  m_Constraints: 0
 --- !u!114 &3593573560901785190
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -155,6 +155,6 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.6576196}
+  m_Offset: {x: 0.21642943, y: -0.6460253}
   serializedVersion: 2
-  m_Radius: 0.66515607
+  m_Radius: 0.37529486
