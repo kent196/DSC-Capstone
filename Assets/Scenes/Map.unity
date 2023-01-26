@@ -7069,41 +7069,13 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 970549133}
     m_Modifications:
-    - target: {fileID: 3332244677509855379, guid: c247b4af64e383d489df266fd521f8fa, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 3332244677872666946, guid: c247b4af64e383d489df266fd521f8fa, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 970549134}
-    - target: {fileID: 3332244677872666946, guid: c247b4af64e383d489df266fd521f8fa, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: MainMenu
-      objectReference: {fileID: 0}
-    - target: {fileID: 3332244677872666946, guid: c247b4af64e383d489df266fd521f8fa, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: UIBehavior, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 3332244677872666947, guid: c247b4af64e383d489df266fd521f8fa, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 3332244677931489185, guid: c247b4af64e383d489df266fd521f8fa, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3332244677931489185, guid: c247b4af64e383d489df266fd521f8fa, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 3332244677955490204, guid: c247b4af64e383d489df266fd521f8fa, type: 3}
       propertyPath: m_Name
       value: EndMenu
-      objectReference: {fileID: 0}
-    - target: {fileID: 3332244677955490204, guid: c247b4af64e383d489df266fd521f8fa, type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3332244677955490207, guid: c247b4af64e383d489df266fd521f8fa, type: 3}
       propertyPath: m_Pivot.x
@@ -7190,33 +7162,9 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3332244678450510963, guid: c247b4af64e383d489df266fd521f8fa, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3332244678450510963, guid: c247b4af64e383d489df266fd521f8fa, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3332244678450510963, guid: c247b4af64e383d489df266fd521f8fa, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 970549134}
-    - target: {fileID: 3332244678450510963, guid: c247b4af64e383d489df266fd521f8fa, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 3332244678450510963, guid: c247b4af64e383d489df266fd521f8fa, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: RestartGame
-      objectReference: {fileID: 0}
-    - target: {fileID: 3332244678450510963, guid: c247b4af64e383d489df266fd521f8fa, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: UIBehavior, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 3332244678450510963, guid: c247b4af64e383d489df266fd521f8fa, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c247b4af64e383d489df266fd521f8fa, type: 3}
 --- !u!1 &326023468
@@ -8484,8 +8432,8 @@ MonoBehaviour:
   dialogue: The celestial formation known as Foiros, deity of the solar, doth consist
     of a quintet of luminaries, which doth form the holy symbol of the cross. 'Tis
     said to be an embodiment of a Blazing Flame, cast forth in every direction. Foiros's
-    arrogant ambition is said to be the cause of his downfall. <br>Kindle anew the
-    stars, that the benediction of the god may illuminate thy path.
+    arrogant ambition is said to be the cause of his downfall. <br><br>Kindle anew
+    the stars, that the benediction of the god may illuminate thy path.
   playerInRange: 0
 --- !u!4 &968626793 stripped
 Transform:
@@ -8999,21 +8947,29 @@ PrefabInstance:
       propertyPath: m_Name
       value: ConfirmBox
       objectReference: {fileID: 0}
-    - target: {fileID: 881497072098395058, guid: f8b0d53c106158a479cf05bb109bf7db, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 881497072166089324, guid: f8b0d53c106158a479cf05bb109bf7db, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
+      objectReference: {fileID: 970549134}
+    - target: {fileID: 881497072166089324, guid: f8b0d53c106158a479cf05bb109bf7db, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ConfirmNo
+      objectReference: {fileID: 0}
+    - target: {fileID: 881497072166089324, guid: f8b0d53c106158a479cf05bb109bf7db, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: UIBehavior, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 881497073017220252, guid: f8b0d53c106158a479cf05bb109bf7db, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
+      objectReference: {fileID: 970549134}
+    - target: {fileID: 881497073017220252, guid: f8b0d53c106158a479cf05bb109bf7db, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ConfirmYes
       objectReference: {fileID: 0}
-    - target: {fileID: 881497073287183798, guid: f8b0d53c106158a479cf05bb109bf7db, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 0.000061035156
+    - target: {fileID: 881497073017220252, guid: f8b0d53c106158a479cf05bb109bf7db, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: UIBehavior, Assembly-CSharp
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f8b0d53c106158a479cf05bb109bf7db, type: 3}
@@ -10009,7 +9965,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueBox: {fileID: 588691238}
   dialogueText: {fileID: 1774713107}
-  dialogue: placeholder
+  dialogue: It was whispered that in the creation of the "eternal stone" in conjunction
+    with other deities, Foiros didst relinquish a measure of his might. He didst
+    also infuse consciousness into the element of fire, that the denizens of the
+    woodlands might partake of his warmth. He was held in high esteem by all creatures,
+    and such adulation did nourish his power, until he was consumed by it.
   playerInRange: 0
 --- !u!1 &1732857636
 GameObject:
@@ -10122,7 +10082,7 @@ MonoBehaviour:
   m_fontColor32:
     serializedVersion: 2
     rgba: 2030043135
-  m_fontColor: {r: 1, g: 1, b: 1, a: 0.47058824}
+  m_fontColor: {r: 1, g: 1, b: 1, a: 0.5882353}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -10145,8 +10105,8 @@ MonoBehaviour:
   m_enableAutoSizing: 1
   m_fontSizeMin: 30
   m_fontSizeMax: 60
-  m_fontStyle: 9
-  m_HorizontalAlignment: 1
+  m_fontStyle: 17
+  m_HorizontalAlignment: 32
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
@@ -10694,24 +10654,12 @@ PrefabInstance:
       objectReference: {fileID: 970549134}
     - target: {fileID: 8653000891157754482, guid: a9929b2edabc21042a6bcd95e82a70eb, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: MainMenu
-      objectReference: {fileID: 0}
-    - target: {fileID: 8653000891157754482, guid: a9929b2edabc21042a6bcd95e82a70eb, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: UIBehavior, Assembly-CSharp
+      value: ExitToMenu
       objectReference: {fileID: 0}
     - target: {fileID: 8653000892075726794, guid: a9929b2edabc21042a6bcd95e82a70eb, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 970549134}
-    - target: {fileID: 8653000892075726794, guid: a9929b2edabc21042a6bcd95e82a70eb, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: ResumeGame
-      objectReference: {fileID: 0}
-    - target: {fileID: 8653000892075726794, guid: a9929b2edabc21042a6bcd95e82a70eb, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: UIBehavior, Assembly-CSharp
-      objectReference: {fileID: 0}
     - target: {fileID: 8653000892134514892, guid: a9929b2edabc21042a6bcd95e82a70eb, type: 3}
       propertyPath: m_Name
       value: PauseMenu
@@ -10798,22 +10746,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8653000892134514893, guid: a9929b2edabc21042a6bcd95e82a70eb, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8653000892310292909, guid: a9929b2edabc21042a6bcd95e82a70eb, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8653000892469763380, guid: a9929b2edabc21042a6bcd95e82a70eb, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8653000892557989433, guid: a9929b2edabc21042a6bcd95e82a70eb, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 0.50001526
-      objectReference: {fileID: 0}
-    - target: {fileID: 8653000892894725065, guid: a9929b2edabc21042a6bcd95e82a70eb, type: 3}
-      propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -11280,7 +11212,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &3168448693390710968
 RectTransform:
   m_ObjectHideFlags: 0
