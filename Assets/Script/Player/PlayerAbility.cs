@@ -6,6 +6,7 @@ public class PlayerAbility : MonoBehaviour
 {
     [SerializeField] private GameObject projectile;
     [SerializeField] private Transform rotatePoint;
+    [SerializeField] private Transform firePoint;
     private PlayerBehaviour playerBehaviour;
 
     private Vector2 aimLineStart;
@@ -77,8 +78,8 @@ public class PlayerAbility : MonoBehaviour
         if (attackTimer < .1f)
         {
             playerBehaviour.TakeDamage(5);
-            GameObject newProjectile = Instantiate(projectile, rotatePoint.position, rotatePoint.rotation);
-            newProjectile.GetComponent<Rigidbody2D>().velocity = rotatePoint.right * launchForce;
+            GameObject newProjectile = Instantiate(projectile, firePoint.position, firePoint.rotation);
+            newProjectile.GetComponent<Rigidbody2D>().velocity = firePoint.right * launchForce;
             attackTimer = 1f;
         }
     }
