@@ -6,7 +6,6 @@ public class QuitButton : MonoBehaviour
 {
     public void QuitGame()
     {
-        Debug.Log("Quit");
         Application.Quit();
     }
 }
