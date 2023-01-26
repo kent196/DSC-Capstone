@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 3593573560901785191}
   - component: {fileID: 3593573560901785190}
   - component: {fileID: 3593573560901785189}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: FireBall
   m_TagString: Fireball
   m_Icon: {fileID: 0}
@@ -29,7 +29,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3593573560901785179}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.014185, y: -0.09523001, z: 0.129544}
+  m_LocalPosition: {x: -2.014185, y: -0.014, z: 0.129544}
   m_LocalScale: {x: 0.3, y: 0.3, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -96,7 +96,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 10
   m_Sprite: {fileID: 232873608, guid: 0ac97ac6dab11804281c1648c391891e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -155,6 +155,6 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.21642943, y: -0.6460253}
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 0.37529486

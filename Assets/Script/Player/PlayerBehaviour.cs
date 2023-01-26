@@ -41,4 +41,19 @@ public class PlayerBehaviour : MonoBehaviour
         //some condition
         GameManager.gameManager.playerHealth.HealUnit(healAmount);
     }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Heal Flower"))
+        {
+            Debug.Log("Heal");
+            Heal(200);
+            healthBar.SetHealth(GameManager.gameManager.playerHealth.Health);
+        }
+    }
 }
