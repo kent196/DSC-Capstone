@@ -11,6 +11,7 @@ public class FlowerAttack : MonoBehaviour
 
     Vector3 tempScale;
     Animator flowerAnim;
+    public GameObject[] detector;
     public FlowerDetector[] flowerDetector;
     float projectileForce = 10f;
     private float attackCooldown = 1f;
@@ -18,7 +19,11 @@ public class FlowerAttack : MonoBehaviour
     void Start()
     {
         flowerAnim=GetComponent<Animator>();
-        flowerDetector = GameObject.FindObjectsOfType<FlowerDetector>();
+        flowerDetector=new FlowerDetector[detector.Length];
+        for(int i = 0; i < detector.Length; i++)
+        {
+            flowerDetector[i] = detector[i].GetComponent<FlowerDetector>();
+        }
     }
 
     // Update is called once per frame
