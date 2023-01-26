@@ -5,9 +5,9 @@ using UnityEngine;
 public class Spider : MonoBehaviour
 {
     [SerializeField] public float moveSpeed = 10f;
-    [SerializeField] public int damage = 10;
+    [SerializeField] public int damage = 1;
     private int maxHealth;
-    private int health;
+    [HideInInspector] public int health;
     [SerializeField] public LayerMask playerLayer;
     [SerializeField] public Vector3 lookRange = new Vector3(10f, 2f, 1f);
     [HideInInspector] public Vector3 currentLookRange;
@@ -31,7 +31,6 @@ public class Spider : MonoBehaviour
 
         health = GameManager.gameManager.spiderHealth.Health;
         maxHealth = GameManager.gameManager.spiderHealth.MaxHealth;
-        Debug.Log(health);
     }
 
     // Update is called once per frame
@@ -102,6 +101,10 @@ public class Spider : MonoBehaviour
     public void TakeDamage(int dmg)
     {
         health -= dmg;
-        Debug.Log(health);
+    }
+    
+    public void Destroy()
+    {
+        Destroy(gameObject);
     }
 }

@@ -13,12 +13,25 @@ public class ObeliskController : MonoBehaviour
         anim = GetComponent<Animator>();    
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
+//     private void OnCollsionEnter2D(Collision2D collision)
+//     {
+// Debug.Log("day la loi cua bao");
+//         if (collision.gameObject.CompareTag("Fireball"))
 
-        if (collision.gameObject.CompareTag("Player") || collision.gameObject.CompareTag("Fireball"))
+//         {
+            
+//             anim.SetTrigger("isActivated");
+//             anim.SetBool("isOperating", true);
+//             obeliskOperating = true;
+//         }
+//     }
+
+    void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Fireball"))
 
         {
+            
             anim.SetTrigger("isActivated");
             anim.SetBool("isOperating", true);
             obeliskOperating = true;

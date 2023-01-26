@@ -8,6 +8,7 @@ TagManager:
   - Fireball
   - Smoke
   - Spider
+  - Heal Flower
   layers:
   - Default
   - TransparentFX

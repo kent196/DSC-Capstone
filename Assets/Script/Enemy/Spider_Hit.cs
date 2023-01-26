@@ -36,5 +36,10 @@ public class Spider_Hit : StateMachineBehaviour
     {
         Physics2D.IgnoreLayerCollision(playerLayer, animator.gameObject.layer, false);
 
+        if(spider.health <= 0)
+        {
+            animator.SetTrigger("dead");
+            animator.SetBool("isDead", true);
+        }
     }
 }
