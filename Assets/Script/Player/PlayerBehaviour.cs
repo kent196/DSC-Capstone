@@ -10,7 +10,7 @@ public class PlayerBehaviour : MonoBehaviour
         healthBar = FindObjectOfType<HealthBar>();
     }
 
-    private void FixedUpdate()
+    private void Update()
     {
         //if (Input.GetKeyDown(KeyCode.Space))
         //{
@@ -23,6 +23,7 @@ public class PlayerBehaviour : MonoBehaviour
         //    }
         //}
         healthBar.SetHealth(GameManager.gameManager.playerHealth.Health);
+        Debug.Log("Health: " + GameManager.gameManager.playerHealth.Health);
         if (GameManager.gameManager.playerHealth.Health == 0)
         {
             GameManager.gameManager.EndGame();
@@ -34,12 +35,16 @@ public class PlayerBehaviour : MonoBehaviour
     {
         //some conditon
         GameManager.gameManager.playerHealth.DamageUnit(dmgAmount);
+        healthBar.SetHealth(GameManager.gameManager.playerHealth.Health);
+
     }
 
     public void Heal(int healAmount)
     {
         //some condition
         GameManager.gameManager.playerHealth.HealUnit(healAmount);
+        healthBar.SetHealth(GameManager.gameManager.playerHealth.Health);
+
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
