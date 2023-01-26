@@ -10,9 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1973100495963084579}
   - component: {fileID: 1973100495963084580}
-  - component: {fileID: 4944424126107930512}
   - component: {fileID: 3221975442712349607}
   - component: {fileID: 119163407}
+  - component: {fileID: 844578359}
   m_Layer: 0
   m_Name: Obelisk
   m_TagString: Untagged
@@ -87,32 +87,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &4944424126107930512
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1973100495963084581}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: -0.039545596, y: -0.21090996}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1.1875}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.6133318, y: 0.7656801}
-  m_EdgeRadius: 0
 --- !u!95 &3221975442712349607
 Animator:
   serializedVersion: 4
@@ -145,3 +119,30 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22234ec039738ed49a14659836c684c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  obeliskOperating: 0
+--- !u!61 &844578359
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1973100495963084581}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.029644012, y: -0.21245575}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1.1875}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.45648956, y: 0.7625885}
+  m_EdgeRadius: 0

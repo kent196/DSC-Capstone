@@ -200,10 +200,9 @@ MonoBehaviour:
   waypoints:
   - {fileID: 2719785511896529729}
   - {fileID: 2719785511943318175}
-  obelisk: {fileID: 4530413353087672696}
-  obeliskState: 0
   elevatorActivated: 0
   elevatorSpeed: 2
+  player: {fileID: 0}
 --- !u!61 &2719785512054962955
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -271,10 +270,9 @@ MonoBehaviour:
   waypoints:
   - {fileID: 2719785511896529729}
   - {fileID: 2719785511943318175}
-  obelisk: {fileID: 4530413353087672696}
-  obeliskState: 0
   elevatorActivated: 0
   elevatorSpeed: 2
+  player: {fileID: 0}
 --- !u!1001 &2719785512544826973
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -336,11 +334,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4a371ec4a67703248837a4411564141e, type: 3}
---- !u!1 &4530413353087672696 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1973100495963084581, guid: 4a371ec4a67703248837a4411564141e, type: 3}
-  m_PrefabInstance: {fileID: 2719785512544826973}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &4530413353087672702 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1973100495963084579, guid: 4a371ec4a67703248837a4411564141e, type: 3}

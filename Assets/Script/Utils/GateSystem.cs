@@ -49,9 +49,5 @@ public class GateSystem : MonoBehaviour
         {
             allActivated = true;
         }
-        else
-        {
-            Debug.Log("not yet");
-        }
     }
 }

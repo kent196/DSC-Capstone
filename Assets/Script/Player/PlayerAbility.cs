@@ -6,7 +6,6 @@ public class PlayerAbility : MonoBehaviour
 {
     [SerializeField] private GameObject projectile;
     [SerializeField] private Transform rotatePoint;
-    [SerializeField] private Transform firePoint;
     private PlayerBehaviour playerBehaviour;
 
     private Vector2 aimLineStart;
@@ -28,7 +27,6 @@ public class PlayerAbility : MonoBehaviour
         playerBehaviour = FindObjectOfType<PlayerBehaviour>();
         lr = GetComponent<LineRenderer>();
         attackTimer = 0f;
-
     }
 
     // Update is called once per frame
@@ -45,11 +43,15 @@ public class PlayerAbility : MonoBehaviour
     }
     void GetDirection()
     {
+
         rotatePosition = rotatePoint.position;
         mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+
         fireDirection = mousePosition - rotatePosition;
         fireDirection.Normalize();
-        rotatePoint.right = fireDirection;
+
+        angle = Mathf.Atan2(fireDirection.y, fireDirection.x) * Mathf.Rad2Deg;
+        rotatePoint.rotation = Quaternion.Euler(0, 0, angle);
     }
     void RangeAttack()
     {
@@ -77,9 +79,9 @@ public class PlayerAbility : MonoBehaviour
     {
         if (attackTimer < .1f)
         {
-            playerBehaviour.TakeDamage(5);
-            GameObject newProjectile = Instantiate(projectile, firePoint.position, firePoint.rotation);
-            newProjectile.GetComponent<Rigidbody2D>().velocity = firePoint.right * launchForce;
+            playerBehaviour.TakeDamage(10);
+            GameObject newProjectile = Instantiate(projectile, rotatePoint.position, rotatePoint.rotation);
+            newProjectile.GetComponent<Rigidbody2D>().velocity = rotatePoint.right * launchForce;
             attackTimer = 1f;
         }
     }
