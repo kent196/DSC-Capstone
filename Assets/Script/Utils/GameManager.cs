@@ -44,7 +44,7 @@ public class GameManager : MonoBehaviour
         gui = FindObjectOfType<Canvas>().transform.Find("GUI").gameObject;
         endMenu = FindObjectOfType<Canvas>().transform.Find("EndMenu").gameObject;
         endMenu.SetActive(false);
-        
+
     }
 
     // Update is called once per frame
@@ -113,10 +113,10 @@ public class GameManager : MonoBehaviour
     {
         if (GameHasEnded == false)
         {
+            Time.timeScale = 0f;
             GameHasEnded = true;
             Debug.Log("Game Over");
             endMenu.SetActive(true);
-            Time.timeScale = 0f;
         }
     }
 

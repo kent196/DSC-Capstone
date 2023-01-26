@@ -24,7 +24,7 @@ public class PlayerBehaviour : MonoBehaviour
         //}
         healthBar.SetHealth(GameManager.gameManager.playerHealth.Health);
         Debug.Log("Health: " + GameManager.gameManager.playerHealth.Health);
-        if (GameManager.gameManager.playerHealth.Health == 0)
+        if (GameManager.gameManager.playerHealth.Health <= 0)
         {
             GameManager.gameManager.EndGame();
         }
