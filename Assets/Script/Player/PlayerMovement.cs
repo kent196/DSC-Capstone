@@ -31,10 +31,10 @@ public class PlayerMovement : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (!isGrounded())
+        /*if (!isGrounded())
         {
             return;
-        }
+        }*/
         #region Run
         float targetSpeed = moveX * moveSpeed;
         float speedDif = targetSpeed - playerRb.velocity.x;
