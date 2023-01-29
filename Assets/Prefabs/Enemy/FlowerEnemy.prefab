@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7875485908977781395}
   - component: {fileID: 7875485908977781392}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: FlowerDetectorRight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -44,7 +44,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7fef14c960925304890766b6d5c0bb61, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  viewRadius: 5
+  viewRadius: 15
   detectionCheckDelay: 0.1
   target: {fileID: 0}
   playerLayerMask:
@@ -63,7 +63,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7875485909144189905}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: FlowerEnemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -98,7 +98,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7875485909932686874}
   - component: {fileID: 7875485909932686875}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: FlowerDetectorLeft
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -132,7 +132,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7fef14c960925304890766b6d5c0bb61, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  viewRadius: 5
+  viewRadius: 15
   detectionCheckDelay: 0.1
   target: {fileID: 0}
   playerLayerMask:
@@ -163,7 +163,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9129870341428614306, guid: 481769e29f58f054b9ad1bc60d4c194e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -10.9
+      value: 5.48
       objectReference: {fileID: 0}
     - target: {fileID: 9129870341428614306, guid: 481769e29f58f054b9ad1bc60d4c194e, type: 3}
       propertyPath: m_LocalPosition.y
@@ -219,7 +219,15 @@ PrefabInstance:
       objectReference: {fileID: 7875485908977781394}
     - target: {fileID: 9129870341428614335, guid: 481769e29f58f054b9ad1bc60d4c194e, type: 3}
       propertyPath: m_Constraints
-      value: 4
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 9129870341503283521, guid: 481769e29f58f054b9ad1bc60d4c194e, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 9129870342150537009, guid: 481769e29f58f054b9ad1bc60d4c194e, type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 481769e29f58f054b9ad1bc60d4c194e, type: 3}

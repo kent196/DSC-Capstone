@@ -50,6 +50,7 @@ public class PlayerBehaviour : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("FlowerProjectile"))
         {
+            TakeDamage(200);
             Destroy(collision.gameObject);
         }
     }

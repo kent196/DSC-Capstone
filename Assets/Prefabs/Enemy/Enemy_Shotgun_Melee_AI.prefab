@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1863496940429950545}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: View Point
   m_TagString: Untagged
   m_Icon: {fileID: -5397416234189338067, guid: 0000000000000000d000000000000000, type: 0}
@@ -40,7 +40,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1863496941265526612}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Patrol Point 2
   m_TagString: Untagged
   m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
@@ -71,7 +71,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1863496941346332568}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Patrol Point 1
   m_TagString: Untagged
   m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
@@ -102,7 +102,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1863496941782955786}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Enemy_Shotgun_Melee_AI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -189,6 +189,10 @@ PrefabInstance:
     - target: {fileID: 7888618869509906616, guid: b7be2f1dde6e0c240924efc0d1f520cd, type: 3}
       propertyPath: m_Name
       value: Enemy_Shotgun_Melee
+      objectReference: {fileID: 0}
+    - target: {fileID: 7888618869509906616, guid: b7be2f1dde6e0c240924efc0d1f520cd, type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 7888618869509906617, guid: b7be2f1dde6e0c240924efc0d1f520cd, type: 3}
       propertyPath: m_Size.x
