@@ -7,6 +7,7 @@ public class FlowerBehaviour : MonoBehaviour
     [SerializeField] private int health;
     [SerializeField] private int maxHealth = 150;
     private Animator animator;
+    private bool isDead=false;  
     // Start is called before the first frame update
     void Start()
     {
@@ -31,12 +32,9 @@ public class FlowerBehaviour : MonoBehaviour
         if (health <= 0)
         {
             animator.SetBool("isDead", true);
+            isDead = true;
+            Destroy(gameObject, 1f);
         }
-    }
-
-    private void Destroy()
-    {
-        Destroy(gameObject);
     }
 
     private void OnCollisionEnter2D(Collision2D collision)

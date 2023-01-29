@@ -16,6 +16,7 @@ public class ShotgunMeleePatrol : MonoBehaviour
     [SerializeField] private float detectionRange = 10f;
 
     PlayerBehaviour playerBehaviour;
+    ShotgunMeleeBehavior shotgunMeleeBehavior;
     Rigidbody2D rb;
     Animator anim;
 
@@ -32,6 +33,7 @@ public class ShotgunMeleePatrol : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
+        shotgunMeleeBehavior=GetComponent<ShotgunMeleeBehavior>();
         playerBehaviour = FindObjectOfType<PlayerBehaviour>();
         attackCooldown = 0f;
         lookDirection = transform.right.normalized;
@@ -77,14 +79,22 @@ public class ShotgunMeleePatrol : MonoBehaviour
     }
     private void Moving()
     {
-        if (IsFacingRight())
+        if (!shotgunMeleeBehavior.IsDead())
         {
-            rb.velocity = new Vector2(moveSpeed, rb.velocity.y);
+            if (IsFacingRight())
+            {
+                rb.velocity = new Vector2(moveSpeed, rb.velocity.y);
+            }
+            else
+            {
+                rb.velocity = new Vector2(-moveSpeed, rb.velocity.y);
+            }
         }
         else
         {
-            rb.velocity = new Vector2(-moveSpeed, rb.velocity.y);
+            rb.velocity = Vector2.zero;
         }
+        
     }
 
     private bool PlayerDetection()

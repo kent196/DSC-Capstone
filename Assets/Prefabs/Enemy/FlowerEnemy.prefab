@@ -25,7 +25,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7875485908977781394}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 5.34, y: 2.21, z: 0.15303949}
+  m_LocalPosition: {x: 13.1, y: -2.068435, z: 0.15303949}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -113,7 +113,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7875485909932686885}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.4, y: 2.25, z: 0.15303949}
+  m_LocalPosition: {x: -2.5085783, y: -2.068435, z: 0.15303949}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -149,6 +149,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7875485909144189905}
     m_Modifications:
+    - target: {fileID: 1664193011, guid: 481769e29f58f054b9ad1bc60d4c194e, type: 3}
+      propertyPath: maxHealth
+      value: 150
+      objectReference: {fileID: 0}
     - target: {fileID: 9129870341428614304, guid: 481769e29f58f054b9ad1bc60d4c194e, type: 3}
       propertyPath: m_Name
       value: Flower
@@ -159,7 +163,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9129870341428614306, guid: 481769e29f58f054b9ad1bc60d4c194e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 3.4114218
+      value: -10.9
       objectReference: {fileID: 0}
     - target: {fileID: 9129870341428614306, guid: 481769e29f58f054b9ad1bc60d4c194e, type: 3}
       propertyPath: m_LocalPosition.y
@@ -215,7 +219,7 @@ PrefabInstance:
       objectReference: {fileID: 7875485908977781394}
     - target: {fileID: 9129870341428614335, guid: 481769e29f58f054b9ad1bc60d4c194e, type: 3}
       propertyPath: m_Constraints
-      value: 7
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 481769e29f58f054b9ad1bc60d4c194e, type: 3}

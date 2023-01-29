@@ -41,7 +41,11 @@ public class Projectiles : MonoBehaviour
         }
         else if (collision.gameObject.layer != 10 && collision.gameObject.CompareTag("Spider"))
         {
-            hasHit = true;          
+            hasHit = true;
+        }
+        else
+        {
+            Destroy();
         }
 
         DestroyAnimation();
