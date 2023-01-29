@@ -152,7 +152,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7888618869509906599, guid: b7be2f1dde6e0c240924efc0d1f520cd, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.79
+      value: -2
       objectReference: {fileID: 0}
     - target: {fileID: 7888618869509906599, guid: b7be2f1dde6e0c240924efc0d1f520cd, type: 3}
       propertyPath: m_LocalPosition.z
@@ -236,7 +236,7 @@ MonoBehaviour:
   visibilityLayer:
     serializedVersion: 2
     m_Bits: 3080
-  moveSpeed: 2
+  moveSpeed: 3
   detectionRange: 10
 --- !u!114 &5016734272377793629
 MonoBehaviour:
