@@ -6,7 +6,7 @@ public class Spider : MonoBehaviour
 {
     [SerializeField] public float moveSpeed = 10f;
     [SerializeField] public int damage = 1;
-    private int maxHealth;
+    [HideInInspector] public int maxHealth;
     [HideInInspector] public int health;
     [SerializeField] public LayerMask playerLayer;
     [SerializeField] public Vector3 lookRange = new Vector3(10f, 2f, 1f);
@@ -19,8 +19,8 @@ public class Spider : MonoBehaviour
     [HideInInspector] public Vector3 homePos;
     [HideInInspector] public Vector3 playerPos;
     [HideInInspector] public GameObject player;
-
     public GameObject attackEffect;
+    [SerializeField] private EnemyHealthBar enemyHealthBar;
     // Start is called before the first frame update
     void Start()
     {
@@ -31,6 +31,8 @@ public class Spider : MonoBehaviour
 
         health = GameManager.gameManager.spiderHealth.Health;
         maxHealth = GameManager.gameManager.spiderHealth.MaxHealth;
+
+        enemyHealthBar.SetHealth(health, maxHealth);
     }
 
     // Update is called once per frame
@@ -41,7 +43,7 @@ public class Spider : MonoBehaviour
 
     public bool isPlayerInLookZone()
     {
-        RaycastHit2D hitInfo = Physics2D.BoxCast(spiderPos, currentLookRange, 0 , Vector2.left, 0, playerLayer);
+        Collider2D hitInfo = Physics2D.OverlapBox(spiderPos, currentLookRange, 0f, playerLayer);
         if(hitInfo)
         {
             player = hitInfo.transform.gameObject;
@@ -57,7 +59,7 @@ public class Spider : MonoBehaviour
 
     public bool isPlayerInAttackZone()
     {
-        RaycastHit2D hitInfo = Physics2D.BoxCast(spiderPos, attackRange, 0 , Vector2.left, 0, playerLayer);
+        Collider2D hitInfo = Physics2D.OverlapBox(spiderPos, attackRange, 0f, playerLayer);
         if(hitInfo)
         {
             player = hitInfo.transform.gameObject;
@@ -98,13 +100,28 @@ public class Spider : MonoBehaviour
         }
     }
 
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if(other.CompareTag("Player"))
+        {
+            animator.SetTrigger("hit");
+        }
+    }
+
     public void TakeDamage(int dmg)
     {
         health -= dmg;
+        enemyHealthBar.SetHealth(health, maxHealth);
     }
     
     public void Destroy()
     {
         Destroy(gameObject);
+    }
+
+    public void Heal(int heal)
+    {
+        health += heal;
+        enemyHealthBar.SetHealth(health, maxHealth);
     }
 }
