@@ -4,59 +4,46 @@ using UnityEngine;
 
 public class FlowerBehaviour : MonoBehaviour
 {
-    HealthStats flowerHealth;
-    Animator flowerAnim;
-    bool _isDead = false;
+    [SerializeField] private int health;
+    [SerializeField] private int maxHealth = 150;
+    private Animator animator;
     // Start is called before the first frame update
     void Start()
     {
-        flowerHealth = new HealthStats(50, 50);
-        flowerAnim = GetComponent<Animator>();
+        health = maxHealth;
+        animator = GetComponent<Animator>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (_isDead)
-        {
-            Die();
-        }
-
+        IsDead();
     }
 
-    void TakeDamage(int dmg)
+    public void TakeDamage(int dmg)
     {
-        flowerHealth.DamageUnit(dmg);
+        animator.SetTrigger("isHit");
+        health -= dmg;
     }
 
-    bool IsDeadCheck()
+    public void IsDead()
     {
-        if (flowerHealth.Health <= 0)
+        if (health <= 0)
         {
-            return true;
+            animator.SetBool("isDead", true);
         }
+    }
 
-        return false;
+    private void Destroy()
+    {
+        Destroy(gameObject);
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Fireball"))
         {
-            TakeDamage(20);
-            flowerAnim.SetTrigger("isHit");
-            _isDead = IsDeadCheck();
-            Debug.Log(flowerHealth.Health);
+            TakeDamage(50);
         }
-    }
-
-    void Die()
-    {
-        flowerAnim.SetBool("isDead", true);
-    }
-
-    private void OnDestroy()
-    {
-        Destroy(gameObject);
     }
 }
