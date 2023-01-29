@@ -11014,22 +11014,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4578349420997085897, guid: fefcc214e342cb945b40e472b8f79ec7, type: 3}
-      propertyPath: offset.y
-      value: -0.7
-      objectReference: {fileID: 0}
-    - target: {fileID: 4578349420997085897, guid: fefcc214e342cb945b40e472b8f79ec7, type: 3}
-      propertyPath: playerLayer.m_Bits
-      value: 38975
-      objectReference: {fileID: 0}
-    - target: {fileID: 4578349420997085897, guid: fefcc214e342cb945b40e472b8f79ec7, type: 3}
-      propertyPath: checkGroundRaySize.x
-      value: 0.6
-      objectReference: {fileID: 0}
-    - target: {fileID: 4578349420997085897, guid: fefcc214e342cb945b40e472b8f79ec7, type: 3}
-      propertyPath: checkGroundRaySize.y
-      value: 0.5
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fefcc214e342cb945b40e472b8f79ec7, type: 3}
 --- !u!1001 &355828880047563778

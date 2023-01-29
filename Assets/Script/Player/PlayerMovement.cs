@@ -13,25 +13,44 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] float velPower = 0.9f;
     [SerializeField] float frictionAmount = 0.2f;
     private float moveX;
-
-    [SerializeField] private LayerMask playerLayer;
+    [SerializeField] private float jumpForce = 5f;
+    [SerializeField] private float dashSpeed = 20f;
+    [SerializeField] private float dashTime = 1f;
+    private float currentDashTime;
     [SerializeField] private Vector3 checkGroundRaySize = new Vector3(2, 1, 0);
 
     [SerializeField] private Vector3 offset;
+
+    private CircleCollider2D coll;
+    private bool canDash = true;
+    [SerializeField] private GameObject dashHit;
     void Start()
     {
         playerRb = GetComponent<Rigidbody2D>();
+        coll = GetComponent<CircleCollider2D>();
+
+        canDash = true;
     }
     void Update()
     {
-
+        Debug.Log(canDash);
         moveX = Input.GetAxisRaw("Horizontal");
+        
+        if(Input.GetKeyDown(KeyCode.Space) && isGrounded())
+        {
+            Jump();
+        }
 
+        if(canDash && Input.GetMouseButtonDown(1))
+        {
+            StartCoroutine(Dash());
+        }
+        
     }
 
     void FixedUpdate()
     {
-        if (!isGrounded())
+        if(!isGrounded())
         {
             return;
         }
@@ -52,22 +71,51 @@ public class PlayerMovement : MonoBehaviour
 
     bool isGrounded()
     {
-        RaycastHit2D hitInfo = Physics2D.BoxCast(transform.position + offset, checkGroundRaySize, 0f, Vector2.left, 0f, playerLayer);
+        RaycastHit2D hitInfo = Physics2D.CircleCast(coll.bounds.center, coll.radius, Vector2.down, coll.radius);
 
-        if (hitInfo)
+        if(hitInfo)
         {
-            return true;
+            if(hitInfo.transform.position.y <= transform.position.y)
+            {
+                return true;
+            } 
         }
-        else
-        {
-            return false;
-        }
+
+        return false;
     }
 
-    void OnDrawGizmos()
+    private void Jump()
     {
-        Gizmos.color = Color.white;
-        Gizmos.DrawWireCube(transform.position + offset, checkGroundRaySize);
+        playerRb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
+    }
 
+    private IEnumerator Dash()
+    {
+        GetComponent<PlayerBehaviour>().TakeDamage(100);
+
+        Vector2 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        Vector2 dashDirection = transform.position.x - mousePos.x >= 0 ? Vector2.left : Vector2.right;
+    
+        playerRb.velocity = dashDirection * dashSpeed;
+        Physics2D.IgnoreLayerCollision(10, 11, true);
+        dashHit.SetActive(true);
+        canDash = false;
+
+        
+        yield return new WaitForSeconds(dashTime/2);
+
+        Physics2D.IgnoreLayerCollision(10, 11, false);
+        dashHit.SetActive(false);
+
+        yield return new WaitForSeconds(dashTime/2);
+        canDash = true;
+    }
+
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        if(other.CompareTag("Spider"))
+        {
+            other.gameObject.GetComponent<Spider>().TakeDamage(5);
+        }
     }
 }
