@@ -20,7 +20,6 @@ public class ShotgunMeleeBehavior : MonoBehaviour
     void Update()
     {
         IsDead();
-        Debug.Log(health);
     }
 
     public void TakeDamage(int dmg)

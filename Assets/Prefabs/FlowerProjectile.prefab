@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 5923415081628735414}
   - component: {fileID: 5923415081628735415}
   - component: {fileID: 5929506590590532788}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: FlowerProjectile
   m_TagString: FlowerProjectile
   m_Icon: {fileID: 0}
