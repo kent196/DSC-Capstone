@@ -80,7 +80,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 1280871742, guid: db8a8203d04c06e40b55d46d94e10b5a, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0, g: 1, b: 0.11372549, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -154,6 +154,7 @@ MonoBehaviour:
   rotatePoint: {fileID: 9129870341503283521}
   firePoint: {fileID: 9129870342150537009}
   detector: []
+  flowerDetector: []
 --- !u!95 &9129870341428614328
 Animator:
   serializedVersion: 4
