@@ -63,4 +63,6 @@ public class PlayerBehaviour : MonoBehaviour
             healthBar.SetHealth(GameManager.gameManager.playerHealth.Health);
         }
     }
+
+
 }
