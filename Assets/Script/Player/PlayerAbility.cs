@@ -65,7 +65,7 @@ public class PlayerAbility : MonoBehaviour
             aimLineStart = rotatePoint.position;
             lr.SetPosition(0, aimLineStart);
             aimLineEnd = rotatePoint.Find("Fire point").position;
-            lr.SetPosition(0, aimLineEnd);
+            lr.SetPosition(1, aimLineEnd);
         }
 
         if (Input.GetMouseButtonUp(0))
