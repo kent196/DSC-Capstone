@@ -7,5 +7,4 @@ public class EndMenu : MonoBehaviour
 {
     public GameObject player;
 
-
 }

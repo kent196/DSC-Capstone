@@ -40,7 +40,6 @@ public class PauseMenu : MonoBehaviour
     {
         pauseMenu.SetActive(false);
         gui.SetActive(true);
-        Debug.Log("Resume");
         Time.timeScale = 1f;
         GameIsPaused = false;
     }
@@ -49,14 +48,12 @@ public class PauseMenu : MonoBehaviour
     {
         pauseMenu.SetActive(true);
         gui.SetActive(false);
-        Debug.Log("Pause");
         Time.timeScale = 0f;
         GameIsPaused = true;
     }
 
     public void ExitToMenu()
     {
-        Debug.Log("Confirm");
         confirmBox.SetActive(true);
     }
 

@@ -76,7 +76,6 @@ public class GameManager : MonoBehaviour
     {
         pauseMenu.SetActive(false);
         gui.SetActive(true);
-        Debug.Log("Resume");
         Time.timeScale = 1f;
         GameIsPaused = false;
     }
@@ -85,14 +84,12 @@ public class GameManager : MonoBehaviour
     {
         pauseMenu.SetActive(true);
         gui.SetActive(false);
-        Debug.Log("Pause");
         Time.timeScale = 0f;
         GameIsPaused = true;
     }
 
     public void ExitToMenu()
     {
-        Debug.Log("Confirm");
         confirmBox.SetActive(true);
         pauseMenu.SetActive(false);
         endMenu.SetActive(false);
@@ -115,7 +112,6 @@ public class GameManager : MonoBehaviour
         {
             Time.timeScale = 0f;
             GameHasEnded = true;
-            Debug.Log("Game Over");
             endMenu.SetActive(true);
         }
     }

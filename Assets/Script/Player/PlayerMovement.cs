@@ -31,10 +31,11 @@ public class PlayerMovement : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (!isGrounded())
-        {
-            return;
-        }
+        // if (!this.isGrounded())
+        // {
+        //     Debug.Log("a");
+        //     return;
+        // }
         #region Run
         float targetSpeed = moveX * moveSpeed;
         float speedDif = targetSpeed - playerRb.velocity.x;
@@ -50,24 +51,23 @@ public class PlayerMovement : MonoBehaviour
         #endregion
     }
 
-    bool isGrounded()
-    {
-        RaycastHit2D hitInfo = Physics2D.BoxCast(transform.position + offset, checkGroundRaySize, 0f, Vector2.left, 0f, playerLayer);
+    // private bool isGrounded()
+    // {
+    //     RaycastHit2D hitInfo = Physics2D.BoxCast(transform.position + offset, checkGroundRaySize, 0f, Vector2.down, 0f, playerLayer);
+        
+    //     if (hitInfo)
+    //     {
+    //         return true;
+    //     }
+    //     else
+    //     {
+    //         return false;
+    //     }
+    // }
 
-        if (hitInfo)
-        {
-            return true;
-        }
-        else
-        {
-            return false;
-        }
-    }
-
-    void OnDrawGizmos()
-    {
-        Gizmos.color = Color.white;
-        Gizmos.DrawWireCube(transform.position + offset, checkGroundRaySize);
-
-    }
+    // void OnDrawGizmos()
+    // {
+    //     Gizmos.color = Color.white;
+    //     Gizmos.DrawWireCube(transform.position + offset, checkGroundRaySize);
+    // }
 }

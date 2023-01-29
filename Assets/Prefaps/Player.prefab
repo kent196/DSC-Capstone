@@ -5000,6 +5000,11 @@ MonoBehaviour:
   deceleration: 7
   velPower: 0.9
   frictionAmount: 0.2
+  playerLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  checkGroundRaySize: {x: 0.7, y: 0.5, z: 0}
+  offset: {x: 0, y: -0.8, z: 0}
 --- !u!50 &4578349420997085898
 Rigidbody2D:
   serializedVersion: 4
