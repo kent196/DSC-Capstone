@@ -9,6 +9,7 @@ TagManager:
   - Smoke
   - Spider
   - Heal Flower
+  - FlowerProjectile
   layers:
   - Default
   - TransparentFX
@@ -23,7 +24,7 @@ TagManager:
   - Player
   - Enemy
   - Bullet
-  - 
+  - EnemyBullet
   - 
   - Fire Effect
   - 

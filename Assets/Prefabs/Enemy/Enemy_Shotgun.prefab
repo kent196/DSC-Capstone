@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 8439263191753831939}
   - component: {fileID: 8439263191753831949}
   - component: {fileID: 5379657597880733355}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Enemy_Shotgun
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -80,7 +80,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: -1148678995, guid: 42a6d67ea6ac9044382a1b0105b12022, type: 3}
-  m_Color: {r: 0, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.96212184, g: 1, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -132,7 +132,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 4
+  m_Constraints: 5
 --- !u!95 &8439263191753831939
 Animator:
   serializedVersion: 4

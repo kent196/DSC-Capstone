@@ -22,7 +22,6 @@ public class ShotgunMeleeBehavior : MonoBehaviour
     void FixedUpdate()
     {
         IsDead();
-        Debug.Log(health);
     }
 
     public void TakeDamage(int dmg)
