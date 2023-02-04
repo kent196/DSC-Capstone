@@ -118,6 +118,7 @@ public class GameManager : MonoBehaviour
 
     public void Restart()
     {
+        playerHealth = new HealthStats(1000, 1000);
         Time.timeScale = 1f;
         GameHasEnded = false;
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
