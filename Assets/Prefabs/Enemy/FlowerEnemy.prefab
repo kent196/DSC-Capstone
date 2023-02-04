@@ -140,7 +140,7 @@ MonoBehaviour:
     m_Bits: 1024
   visibilityLayer:
     serializedVersion: 2
-    m_Bits: 11264
+    m_Bits: 11272
   <TargetVisible>k__BackingField: 0
 --- !u!1001 &7875485908013292737
 PrefabInstance:

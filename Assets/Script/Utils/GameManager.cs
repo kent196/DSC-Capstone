@@ -51,7 +51,6 @@ public class GameManager : MonoBehaviour
     void Update()
     {
         HandlePauseGame();
-
     }
 
     public void HandlePauseGame()
