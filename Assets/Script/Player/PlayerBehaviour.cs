@@ -22,12 +22,30 @@ public class PlayerBehaviour : MonoBehaviour
         //        GameManager.gameManager.EndGame();
         //    }
         //}
+        //healthBar.SetHealth(GameManager.gameManager.playerHealth.Health);
+        //if (GameManager.gameManager.playerHealth.Health <= 0)
+        //{
+        //    GameManager.gameManager.EndGame();
+        //}
+        SetHealth();
+        IsDead();
+    }
+
+    private void SetHealth()
+    {
         healthBar.SetHealth(GameManager.gameManager.playerHealth.Health);
+
+    }
+
+    private void IsDead()
+    {
         if (GameManager.gameManager.playerHealth.Health <= 0)
         {
             GameManager.gameManager.EndGame();
+            return;
         }
     }
+
 
 
     public void TakeDamage(int dmgAmount)
