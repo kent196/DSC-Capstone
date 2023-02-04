@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class FlowerAttack : MonoBehaviour
 {
+    public AudioSource atkSFX;
+
     [SerializeField] private GameObject projectile;
     [SerializeField] private GameObject player;
     [SerializeField] private GameObject rotatePoint;
@@ -18,12 +20,13 @@ public class FlowerAttack : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        flowerAnim=GetComponent<Animator>();
-        flowerDetector=new FlowerDetector[detector.Length];
-        for(int i = 0; i < detector.Length; i++)
+        flowerAnim = GetComponent<Animator>();
+        flowerDetector = new FlowerDetector[detector.Length];
+        for (int i = 0; i < detector.Length; i++)
         {
             flowerDetector[i] = detector[i].GetComponent<FlowerDetector>();
         }
+        atkSFX = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -53,7 +56,7 @@ public class FlowerAttack : MonoBehaviour
                 flowerAnim.SetBool("isAttacking", false);
             }
         }
-        
+
     }
     void AimAndAttack()
     {
@@ -89,7 +92,7 @@ public class FlowerAttack : MonoBehaviour
     }
     void LaunchProjectile()
     {
-        
+        atkSFX.Play();
         GameObject newProjectile = Instantiate(projectile, firePoint.transform.position, firePoint.transform.rotation);
         newProjectile.GetComponent<Rigidbody2D>().AddForce(CalculateVelocity(player.transform.position, firePoint.transform.position, projectileForce), ForceMode2D.Impulse);
     }
