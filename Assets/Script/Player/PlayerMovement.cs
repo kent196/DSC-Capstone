@@ -109,13 +109,12 @@ public class PlayerMovement : MonoBehaviour
         dashHit.SetActive(true);
         canDash = false;
 
-        
         yield return new WaitForSeconds(dashTime/2);
 
         Physics2D.IgnoreLayerCollision(10, 11, false);
         dashHit.SetActive(false);
 
-        yield return new WaitForSeconds(dashTime/2);
+        yield return new WaitUntil(() => isGrounded());
         canDash = true;
     }
 
