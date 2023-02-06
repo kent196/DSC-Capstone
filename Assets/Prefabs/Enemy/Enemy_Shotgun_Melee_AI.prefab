@@ -134,6 +134,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1863496941782955786}
     m_Modifications:
+    - target: {fileID: 4244677023292046010, guid: b7be2f1dde6e0c240924efc0d1f520cd, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7888618869509906596, guid: b7be2f1dde6e0c240924efc0d1f520cd, type: 3}
       propertyPath: m_Constraints
       value: 4
@@ -229,6 +233,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e35d262c596b29142b4b7e7636519323, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  atkSFX: {fileID: 0}
   patrolPoints:
   - {fileID: 1863496941346332568}
   - {fileID: 1863496941265526612}

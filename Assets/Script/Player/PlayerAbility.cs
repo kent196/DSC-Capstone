@@ -7,6 +7,7 @@ public class PlayerAbility : MonoBehaviour
     [SerializeField] private GameObject projectile;
     [SerializeField] private Transform rotatePoint;
     private PlayerBehaviour playerBehaviour;
+    public AudioSource atkSFX;
 
     private Vector2 aimLineStart;
     private Vector2 aimLineEnd;
@@ -27,6 +28,7 @@ public class PlayerAbility : MonoBehaviour
         playerBehaviour = FindObjectOfType<PlayerBehaviour>();
         lr = GetComponent<LineRenderer>();
         attackTimer = 0f;
+        atkSFX = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -61,6 +63,7 @@ public class PlayerAbility : MonoBehaviour
         }
         if (Input.GetMouseButton(0))
         {
+
             lr.enabled = true;
             aimLineStart = rotatePoint.position;
             lr.SetPosition(0, aimLineStart);
@@ -73,16 +76,20 @@ public class PlayerAbility : MonoBehaviour
             //Mouse up, launch
             LaunchProjectile();
             lr.enabled = false;
+
         }
     }
     void LaunchProjectile()
     {
         if (attackTimer < .1f)
         {
+            atkSFX.Play();
+
             playerBehaviour.TakeDamage(10);
             GameObject newProjectile = Instantiate(projectile, rotatePoint.position, rotatePoint.rotation);
             newProjectile.GetComponent<Rigidbody2D>().velocity = rotatePoint.right * launchForce;
             attackTimer = 1f;
+
         }
     }
 }

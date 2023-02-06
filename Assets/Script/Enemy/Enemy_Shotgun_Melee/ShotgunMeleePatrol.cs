@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class ShotgunMeleePatrol : MonoBehaviour
 {
+
+    public AudioSource atkSFX;
     [SerializeField] private Transform[] patrolPoints;
 
     [SerializeField] private GameObject viewPoint;
@@ -37,6 +39,7 @@ public class ShotgunMeleePatrol : MonoBehaviour
         playerBehaviour = FindObjectOfType<PlayerBehaviour>();
         attackCooldown = 0f;
         lookDirection = transform.right.normalized;
+        atkSFX = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -166,6 +169,7 @@ public class ShotgunMeleePatrol : MonoBehaviour
 
     private void DealDamage()
     {
+        atkSFX.Play();
         playerBehaviour.TakeDamage(50);
     }
 

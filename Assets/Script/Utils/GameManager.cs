@@ -7,6 +7,8 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     public static GameManager gameManager { get; private set; }
+    public HealthStats playerHealth;
+    public HealthStats spiderHealth;
     public static bool GameIsPaused = false;
     public static bool GameHasEnded = false;
     [SerializeField] public GameObject pauseMenu;
@@ -15,8 +17,11 @@ public class GameManager : MonoBehaviour
     [SerializeField] private GameObject endMenu;
 
 
+
     private void Awake()
     {
+        playerHealth = new HealthStats(1000, 1000);
+        spiderHealth = new HealthStats(50, 50);
         if (gameManager != null && gameManager != this)
         {
             Destroy(this);
@@ -32,7 +37,6 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
-
         pauseMenu = FindObjectOfType<Canvas>().transform.Find("PauseMenu").gameObject;
         pauseMenu.SetActive(false);
         confirmBox = FindObjectOfType<Canvas>().transform.Find("ConfirmBox").gameObject;
@@ -106,7 +110,6 @@ public class GameManager : MonoBehaviour
     {
         if (GameHasEnded == false)
         {
-            Debug.Log("end game");
             Time.timeScale = 0f;
             GameHasEnded = true;
             endMenu.SetActive(true);
@@ -115,7 +118,7 @@ public class GameManager : MonoBehaviour
 
     public void Restart()
     {
-        Debug.Log("gameshouldbe restart");
+        playerHealth = new HealthStats(1000, 1000);
         Time.timeScale = 1f;
         GameHasEnded = false;
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
@@ -124,10 +127,9 @@ public class GameManager : MonoBehaviour
     public void Menu()
     {
         {
+
             GameHasEnded = false;
             SceneManager.LoadScene("Start");
         }
     }
-
-    
 }

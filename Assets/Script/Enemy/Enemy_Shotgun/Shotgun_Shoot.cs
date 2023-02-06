@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Shotgun_Shoot : MonoBehaviour
 {
+
+    public AudioSource atkSFX;
     public GameObject shotgunPrefab;
     public float chargeTime = 1f;
     [SerializeField] private int numberOfBullets = 5;
@@ -27,6 +29,7 @@ public class Shotgun_Shoot : MonoBehaviour
         {
             flowerDetector[i] = detector[i].GetComponent<FlowerDetector>();
         }
+        atkSFX = GetComponent<AudioSource>();
     }
 
     void Update()
@@ -58,6 +61,7 @@ public class Shotgun_Shoot : MonoBehaviour
 
     public void Shoot()
     {
+        atkSFX.Play();
         playerBehaviour.TakeDamage(50);
     }
 }
