@@ -63,7 +63,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7875485909144189905}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: FlowerEnemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -149,6 +149,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7875485909144189905}
     m_Modifications:
+    - target: {fileID: 1664193011, guid: 481769e29f58f054b9ad1bc60d4c194e, type: 3}
+      propertyPath: damage
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 1664193011, guid: 481769e29f58f054b9ad1bc60d4c194e, type: 3}
+      propertyPath: maxHealth
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 1664193011, guid: 481769e29f58f054b9ad1bc60d4c194e, type: 3}
+      propertyPath: enemyHealthBar
+      value: 
+      objectReference: {fileID: 4235833901562002309, guid: f1f96f22f330a1648836012719552d9f, type: 3}
     - target: {fileID: 9129870341428614304, guid: 481769e29f58f054b9ad1bc60d4c194e, type: 3}
       propertyPath: m_Name
       value: Flower
@@ -219,9 +231,10 @@ PrefabInstance:
       objectReference: {fileID: 7875485908977781394}
     - target: {fileID: 9129870341428614335, guid: 481769e29f58f054b9ad1bc60d4c194e, type: 3}
       propertyPath: m_Constraints
-      value: 7
+      value: 5
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1664193011, guid: 481769e29f58f054b9ad1bc60d4c194e, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 481769e29f58f054b9ad1bc60d4c194e, type: 3}
 --- !u!1 &1439049619332925537 stripped
 GameObject:
@@ -324,6 +337,22 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &595113091303763050
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1439049619332925537}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6bf7dfdaa6191ce4c92e04a55ce00c35, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 30
+  damage: 1000
+  enemyHealthBarHolder: {fileID: 4235833901562002309, guid: f1f96f22f330a1648836012719552d9f, type: 3}
+  enemyType: 0
 --- !u!4 &1439049619332925539 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 9129870341428614306, guid: 481769e29f58f054b9ad1bc60d4c194e, type: 3}

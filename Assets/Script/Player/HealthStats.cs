@@ -6,31 +6,31 @@ using UnityEngine;
 public class HealthStats 
 {
     //Fields
-    private int currentMaxHealth;
-    private int currentHealth;
+    private float currentMaxHealth;
+    private float currentHealth;
 
     //Properties
-    public int Health
+    public float Health
     {
         get { return currentHealth; }
         set { currentHealth = value; }
     }
 
-    public int MaxHealth
+    public float MaxHealth
     {
         get { return currentMaxHealth; }
         set { currentMaxHealth = value; }
     }
 
     //Constructor
-    public HealthStats(int health, int maxHealth)
+    public HealthStats(float health, float maxHealth)
     {
         currentHealth = health;
         currentMaxHealth = maxHealth;
     }
 
     //Methods
-    public void DamageUnit(int dmgAmount)
+    public void DamageUnit(float dmgAmount)
     {
         if (currentHealth > 0)
         {
@@ -38,7 +38,7 @@ public class HealthStats
         }
     }
 
-    public void HealUnit(int healAmount)
+    public void HealUnit(float healAmount)
     {
         if (currentHealth < currentMaxHealth)
         {

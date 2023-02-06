@@ -149,6 +149,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a2491a22f9e1cb48befd0353e6899ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  atkSFX: {fileID: 0}
   projectile: {fileID: 5923415081628735403, guid: 3bdb7fa2bcac0644ab69259ff6db578f, type: 3}
   player: {fileID: 0}
   rotatePoint: {fileID: 9129870341503283521}
@@ -187,6 +188,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6bf7dfdaa6191ce4c92e04a55ce00c35, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxHealth: 0
+  damage: 0
+  enemyHealthBarHolder: {fileID: 0}
+  enemyType: 1
 --- !u!1 &9129870341503283521
 GameObject:
   m_ObjectHideFlags: 0

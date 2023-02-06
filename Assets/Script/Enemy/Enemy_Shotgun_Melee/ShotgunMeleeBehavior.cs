@@ -7,7 +7,7 @@ public class ShotgunMeleeBehavior : MonoBehaviour
     [SerializeField] private int health;
     [SerializeField] private int maxHealth = 500;
     private Animator animator;
-    private bool isDead = false;
+    // private bool isDead = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -33,7 +33,7 @@ public class ShotgunMeleeBehavior : MonoBehaviour
         if (health <= 0)
         {
             animator.SetBool("isDead", true);
-            isDead = true;
+            // isDead = true;
             Destroy(gameObject, 1f);
         }
     }
