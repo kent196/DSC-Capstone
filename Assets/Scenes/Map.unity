@@ -8358,7 +8358,7 @@ MonoBehaviour:
   - {fileID: 357153813}
   elevatorActivated: 0
   elevatorSpeed: 2
-  player: {fileID: 2111481099}
+  player: {fileID: 0}
 --- !u!95 &1044462363
 Animator:
   serializedVersion: 4
@@ -8911,7 +8911,7 @@ MonoBehaviour:
   - {fileID: 1732857636}
   elevatorActivated: 0
   elevatorSpeed: 3
-  player: {fileID: 2111481099}
+  player: {fileID: 0}
 --- !u!95 &1287334755
 Animator:
   serializedVersion: 4
@@ -9310,7 +9310,7 @@ MonoBehaviour:
   - {fileID: 1361405870}
   elevatorActivated: 0
   elevatorSpeed: 3
-  player: {fileID: 2111481099}
+  player: {fileID: 0}
 --- !u!95 &1569058987
 Animator:
   serializedVersion: 4
@@ -10067,7 +10067,7 @@ MonoBehaviour:
   - {fileID: 1220140342}
   elevatorActivated: 0
   elevatorSpeed: 2
-  player: {fileID: 2111481099}
+  player: {fileID: 0}
 --- !u!95 &2002719219
 Animator:
   serializedVersion: 4
@@ -10213,11 +10213,11 @@ PrefabInstance:
     - target: {fileID: 56430215, guid: a9929b2edabc21042a6bcd95e82a70eb, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 2111481101}
+      objectReference: {fileID: 0}
     - target: {fileID: 56430215, guid: a9929b2edabc21042a6bcd95e82a70eb, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
-      objectReference: {fileID: 2111481101}
+      objectReference: {fileID: 0}
     - target: {fileID: 56430215, guid: a9929b2edabc21042a6bcd95e82a70eb, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
       value: 2
@@ -10380,7 +10380,7 @@ MonoBehaviour:
   - {fileID: 1930122264}
   elevatorActivated: 0
   elevatorSpeed: 2
-  player: {fileID: 2111481099}
+  player: {fileID: 0}
 --- !u!95 &2042091121
 Animator:
   serializedVersion: 4
@@ -10479,22 +10479,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1 &2111481099 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4578349420997085892, guid: fefcc214e342cb945b40e472b8f79ec7, type: 3}
-  m_PrefabInstance: {fileID: 2132612926}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &2111481101 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 4286255526261984424, guid: fefcc214e342cb945b40e472b8f79ec7, type: 3}
-  m_PrefabInstance: {fileID: 2132612926}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2111481099}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 655879d66d957e740ae15bcd06a50e01, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &2132612926
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10502,6 +10486,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1675915890, guid: fefcc214e342cb945b40e472b8f79ec7, type: 3}
+      propertyPath: m_Layer
+      value: 16
+      objectReference: {fileID: 0}
     - target: {fileID: 4286255526261984424, guid: fefcc214e342cb945b40e472b8f79ec7, type: 3}
       propertyPath: healthBar
       value: 
@@ -10516,11 +10504,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4578349420997085896, guid: fefcc214e342cb945b40e472b8f79ec7, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -38.38
+      value: -21.4
       objectReference: {fileID: 0}
     - target: {fileID: 4578349420997085896, guid: fefcc214e342cb945b40e472b8f79ec7, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 181.73
+      value: 183.5
       objectReference: {fileID: 0}
     - target: {fileID: 4578349420997085896, guid: fefcc214e342cb945b40e472b8f79ec7, type: 3}
       propertyPath: m_LocalPosition.z
@@ -10566,7 +10554,7 @@ PrefabInstance:
     - target: {fileID: 93174167, guid: 0d5760f87c8befa4591a2a4e859269c4, type: 3}
       propertyPath: player
       value: 
-      objectReference: {fileID: 2111481099}
+      objectReference: {fileID: 0}
     - target: {fileID: 93174167, guid: 0d5760f87c8befa4591a2a4e859269c4, type: 3}
       propertyPath: elevatorActivated
       value: 0

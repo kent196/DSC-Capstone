@@ -9,7 +9,7 @@ public class PopUpSystem : MonoBehaviour
     [SerializeField] private GameObject dialogueBox;
     [SerializeField] private TMP_Text dialogueText;
     public string dialogue;
-    [SerializeField] bool playerInRange;
+    [SerializeField] public bool playerInRange;
 
     void Start()
     {
@@ -22,8 +22,10 @@ public class PopUpSystem : MonoBehaviour
         {
             if(dialogueBox.activeInHierarchy)
             {
+                Time.timeScale = 1;
                 dialogueBox.SetActive(false);
             }else{
+                Time.timeScale = 0;
                 dialogueBox.SetActive(true);
                 dialogueText.text = dialogue;
             }
@@ -34,6 +36,7 @@ public class PopUpSystem : MonoBehaviour
     {
         if(other.CompareTag("Player"))
         {
+            other.GetComponent<PlayerMovement>().canJump = false;
             playerInRange = true;
         }
     }
@@ -43,6 +46,7 @@ public class PopUpSystem : MonoBehaviour
         if(other.CompareTag("Player"))
         {
             playerInRange = false;
+            other.GetComponent<PlayerMovement>().canJump = true;
             dialogueBox.SetActive(false);
         }   
     }

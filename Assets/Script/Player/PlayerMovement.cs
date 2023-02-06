@@ -24,6 +24,7 @@ public class PlayerMovement : MonoBehaviour
     private CircleCollider2D coll;
     private bool canDash = true;
     [SerializeField] private GameObject dashHit;
+    [HideInInspector] public bool canJump = true;
     void Start()
     {
         dashHit.SetActive(false);
@@ -42,7 +43,7 @@ public class PlayerMovement : MonoBehaviour
             PlayerPrefs.DeleteAll();
         }
 
-        if(Input.GetKeyDown(KeyCode.Space) && isGrounded())
+        if(Input.GetKeyDown(KeyCode.Space) && isGrounded() && canJump)
         {
             Jump();
         }
@@ -81,7 +82,7 @@ public class PlayerMovement : MonoBehaviour
 
         if(hitInfo)
         {
-            if(hitInfo.transform.position.y <= transform.position.y)
+            if(hitInfo.point.y <= transform.position.y)
             {
                 return true;
             } 
@@ -97,10 +98,11 @@ public class PlayerMovement : MonoBehaviour
 
     private IEnumerator Dash()
     {
-        GetComponent<PlayerBehaviour>().TakeDamage(100);
+        GetComponent<PlayerBehaviour>().TakeDamage(10);
 
-        Vector2 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        Vector2 dashDirection = transform.position.x - mousePos.x >= 0 ? Vector2.left : Vector2.right;
+        Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        Vector3 dashDirection = (mousePos - transform.position).normalized;
+        dashDirection.y = Mathf.Clamp(dashDirection.y, -0.3f, 0.3f);
     
         playerRb.velocity = dashDirection * dashSpeed;
         Physics2D.IgnoreLayerCollision(10, 11, true);
