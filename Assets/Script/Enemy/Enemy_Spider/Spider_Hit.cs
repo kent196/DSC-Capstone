@@ -2,32 +2,30 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Spider_Attack : StateMachineBehaviour
+public class Spider_Hit : StateMachineBehaviour
 {
     private Spider spider;
-    private PlayerBehaviour playerBehaviour;
+    [SerializeField] private int playerLayer = 10;
+    [SerializeField] private float multiplyLookrange = 3;
+    
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-       spider = animator.GetComponent<Spider>();
-
-       spider.attackEffect.SetActive(true);
-       playerBehaviour = spider.player.GetComponent<PlayerBehaviour>();
+        spider = animator.GetComponent<Spider>();
+        spider.currentLookRange.x = spider.lookRange.x * multiplyLookrange;
+        
+        Physics2D.IgnoreLayerCollision(playerLayer, animator.gameObject.layer, true);
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         spider.FlipSpiderTo(spider.playerPos);
-        
-        spider.attackEffect.transform.position = spider.playerPos - new Vector3(0,0.1f,0);
-
-        if(animator.GetCurrentAnimatorClipInfo(0)[0].clip.length - stateInfo.normalizedTime <= 0.01f)
+        if(spider.isPlayerInAttackZone())
         {
-            DealDamage();
+            animator.SetTrigger("attack");
         }
-
-        if(!spider.isPlayerInAttackZone())
+        else
         {
             animator.SetTrigger("walk");
         }
@@ -36,11 +34,12 @@ public class Spider_Attack : StateMachineBehaviour
     // OnStateExit is called when a transition ends and the state machine finishes evaluating this state
     override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        spider.attackEffect.SetActive(false);
-    }
+        Physics2D.IgnoreLayerCollision(playerLayer, animator.gameObject.layer, false);
 
-    private void DealDamage()
-    {
-        playerBehaviour.TakeDamage(spider.damage);
+        if(spider.Health <= 0)
+        {
+            animator.SetTrigger("dead");
+            animator.SetBool("isDead", true);
+        }
     }
 }

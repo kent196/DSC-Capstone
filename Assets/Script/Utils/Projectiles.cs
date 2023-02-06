@@ -31,20 +31,17 @@ public class Projectiles : MonoBehaviour
     {
         if (this.CompareTag("Fireball"))
         {
-            if(collision.gameObject.CompareTag("Spider"))
-            {
-                collision.gameObject.GetComponent<Spider>().TakeDamage(10);
-            }
             anim.Play("Explode");
-            hasHit = true;
-
-        }
-        else if (collision.gameObject.layer != 10 && collision.gameObject.CompareTag("Spider"))
-        {
-            hasHit = true;          
         }
 
+        hasHit = true;          
         DestroyAnimation();
+    }
+
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        Destroy();
+        hasHit = true;
     }
 
     public void Destroy()

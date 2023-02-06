@@ -50,6 +50,6 @@ public class Spider_Walk : StateMachineBehaviour
     // OnStateExit is called when a transition ends and the state machine finishes evaluating this state
     override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        spider.rb.velocity = new Vector2(0, spider.rb.velocity.y);
+        spider.Rb.velocity = new Vector2(0, spider.Rb.velocity.y);
     }
 }

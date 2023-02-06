@@ -251,7 +251,7 @@ AnimatorController:
     m_DefaultInt: 0
     m_DefaultBool: 0
     m_Controller: {fileID: 0}
-  - m_Name: hit
+  - m_Name: isHit
     m_Type: 9
     m_DefaultFloat: 0
     m_DefaultInt: 0
@@ -294,6 +294,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d427c1347f23e346bc8652c900eb3dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  enemyHealthBar: {fileID: 0}
 --- !u!114 &1135701576718297036
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -365,7 +366,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: hit
+    m_ConditionEvent: isHit
     m_EventTreshold: 0
   - m_ConditionMode: 2
     m_ConditionEvent: isDead

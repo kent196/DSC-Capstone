@@ -48,7 +48,7 @@ public class PlayerBehaviour : MonoBehaviour
 
 
 
-    public void TakeDamage(int dmgAmount)
+    public void TakeDamage(float dmgAmount)
     {
         //some conditon
         GameManager.gameManager.playerHealth.DamageUnit(dmgAmount);
@@ -64,21 +64,17 @@ public class PlayerBehaviour : MonoBehaviour
 
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (collision.gameObject.CompareTag("FlowerProjectile"))
-        {
-            Destroy(collision.gameObject);
-        }
-    }
-
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Heal Flower"))
         {
-            Debug.Log("Heal");
             Heal(200);
             healthBar.SetHealth(GameManager.gameManager.playerHealth.Health);
+        }
+
+        if(collision.CompareTag("FlowerProjectile"))
+        {
+            TakeDamage(50);
         }
     }
 

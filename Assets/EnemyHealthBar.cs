@@ -13,10 +13,9 @@ public class EnemyHealthBar : MonoBehaviour
     void Update()
     {
         slider.transform.position = Camera.main.WorldToScreenPoint(transform.parent.position + offSet);
-        
     }
 
-    public void SetHealth(int health, int maxHealth)
+    public void SetHealth(float health, float maxHealth)
     {
         slider.gameObject.SetActive(health < maxHealth && health>0);
         slider.maxValue = maxHealth;

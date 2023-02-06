@@ -26,6 +26,8 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private GameObject dashHit;
     void Start()
     {
+        dashHit.SetActive(false);
+        
         playerRb = GetComponent<Rigidbody2D>();
         coll = GetComponent<CircleCollider2D>();
 
@@ -33,9 +35,13 @@ public class PlayerMovement : MonoBehaviour
     }
     void Update()
     {
-        Debug.Log(canDash);
         moveX = Input.GetAxisRaw("Horizontal");
         
+        if(Input.GetKeyDown(KeyCode.R))
+        {
+            PlayerPrefs.DeleteAll();
+        }
+
         if(Input.GetKeyDown(KeyCode.Space) && isGrounded())
         {
             Jump();
