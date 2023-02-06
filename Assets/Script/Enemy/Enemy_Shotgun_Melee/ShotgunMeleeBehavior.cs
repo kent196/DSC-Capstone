@@ -7,19 +7,17 @@ public class ShotgunMeleeBehavior : MonoBehaviour
     [SerializeField] private int health;
     [SerializeField] private int maxHealth = 500;
     private Animator animator;
-    private Rigidbody2D rb;
-    private bool isDead = false;
+    // private bool isDead = false;
     // Start is called before the first frame update
     void Start()
     {
 
         health = maxHealth;
         animator = GetComponent<Animator>();
-        rb=GetComponent<Rigidbody2D>();
     }
 
     // Update is called once per frame
-    void FixedUpdate()
+    void Update()
     {
         IsDead();
     }
@@ -30,28 +28,20 @@ public class ShotgunMeleeBehavior : MonoBehaviour
         health -= dmg;
 
     }
-    public bool IsDead()
+    public void IsDead()
     {
         if (health <= 0)
         {
             animator.SetBool("isDead", true);
-            isDead = true;
+            // isDead = true;
             Destroy(gameObject, 1f);
         }
-        return isDead;
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Fireball"))
         {
             TakeDamage(50);
-        }
-    }
-    private void OnTriggerEnter2D(Collider2D other)
-    {
-        if(other.CompareTag("Player"))
-        {
-            animator.SetTrigger("isHit");
         }
     }
 }

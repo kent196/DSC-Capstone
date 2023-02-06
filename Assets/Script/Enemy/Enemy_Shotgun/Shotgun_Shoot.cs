@@ -8,9 +8,9 @@ public class Shotgun_Shoot : MonoBehaviour
     public AudioSource atkSFX;
     public GameObject shotgunPrefab;
     public float chargeTime = 1f;
-    [SerializeField] private int numberOfBullets = 5;
-    [SerializeField] private float spreadAngle = 10f;
-    private float currentChargeTime = 0f;
+    // [SerializeField] private int numberOfBullets = 5;
+    // [SerializeField] private float spreadAngle = 10f;
+    // private float currentChargeTime = 0f;
     public Animator shotgunerAnim;
     private Vector3 tempScale;
     public GameObject player;

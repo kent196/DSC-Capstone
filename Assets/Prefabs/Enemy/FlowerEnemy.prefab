@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7875485908977781395}
   - component: {fileID: 7875485908977781392}
-  m_Layer: 11
+  m_Layer: 0
   m_Name: FlowerDetectorRight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -25,7 +25,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7875485908977781394}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 5.34, y: 2.21, z: 0.15303949}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -44,7 +44,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7fef14c960925304890766b6d5c0bb61, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  viewRadius: 15
+  viewRadius: 5
   detectionCheckDelay: 0.1
   target: {fileID: 0}
   playerLayerMask:
@@ -52,7 +52,7 @@ MonoBehaviour:
     m_Bits: 1024
   visibilityLayer:
     serializedVersion: 2
-    m_Bits: 11273
+    m_Bits: 11264
   <TargetVisible>k__BackingField: 0
 --- !u!1 &7875485909144189904
 GameObject:
@@ -65,11 +65,11 @@ GameObject:
   - component: {fileID: 7875485909144189905}
   m_Layer: 11
   m_Name: FlowerEnemy
-  m_TagString: Enemy
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &7875485909144189905
 Transform:
   m_ObjectHideFlags: 0
@@ -98,7 +98,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7875485909932686874}
   - component: {fileID: 7875485909932686875}
-  m_Layer: 11
+  m_Layer: 0
   m_Name: FlowerDetectorLeft
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -113,7 +113,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7875485909932686885}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 1.4, y: 2.25, z: 0.15303949}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -132,7 +132,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7fef14c960925304890766b6d5c0bb61, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  viewRadius: 15
+  viewRadius: 5
   detectionCheckDelay: 0.1
   target: {fileID: 0}
   playerLayerMask:
@@ -140,7 +140,7 @@ MonoBehaviour:
     m_Bits: 1024
   visibilityLayer:
     serializedVersion: 2
-    m_Bits: 11273
+    m_Bits: 11264
   <TargetVisible>k__BackingField: 0
 --- !u!1001 &7875485908013292737
 PrefabInstance:
@@ -150,9 +150,17 @@ PrefabInstance:
     m_TransformParent: {fileID: 7875485909144189905}
     m_Modifications:
     - target: {fileID: 1664193011, guid: 481769e29f58f054b9ad1bc60d4c194e, type: 3}
-      propertyPath: maxHealth
-      value: 150
+      propertyPath: damage
+      value: 20
       objectReference: {fileID: 0}
+    - target: {fileID: 1664193011, guid: 481769e29f58f054b9ad1bc60d4c194e, type: 3}
+      propertyPath: maxHealth
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 1664193011, guid: 481769e29f58f054b9ad1bc60d4c194e, type: 3}
+      propertyPath: enemyHealthBar
+      value: 
+      objectReference: {fileID: 4235833901562002309, guid: f1f96f22f330a1648836012719552d9f, type: 3}
     - target: {fileID: 9129870341428614304, guid: 481769e29f58f054b9ad1bc60d4c194e, type: 3}
       propertyPath: m_Name
       value: Flower
@@ -163,15 +171,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9129870341428614306, guid: 481769e29f58f054b9ad1bc60d4c194e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 3.4114218
       objectReference: {fileID: 0}
     - target: {fileID: 9129870341428614306, guid: 481769e29f58f054b9ad1bc60d4c194e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 2.801565
       objectReference: {fileID: 0}
     - target: {fileID: 9129870341428614306, guid: 481769e29f58f054b9ad1bc60d4c194e, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 0.15303949
       objectReference: {fileID: 0}
     - target: {fileID: 9129870341428614306, guid: 481769e29f58f054b9ad1bc60d4c194e, type: 3}
       propertyPath: m_LocalRotation.w
@@ -225,15 +233,8 @@ PrefabInstance:
       propertyPath: m_Constraints
       value: 5
       objectReference: {fileID: 0}
-    - target: {fileID: 9129870341503283521, guid: 481769e29f58f054b9ad1bc60d4c194e, type: 3}
-      propertyPath: m_Layer
-      value: 11
-      objectReference: {fileID: 0}
-    - target: {fileID: 9129870342150537009, guid: 481769e29f58f054b9ad1bc60d4c194e, type: 3}
-      propertyPath: m_Layer
-      value: 11
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1664193011, guid: 481769e29f58f054b9ad1bc60d4c194e, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 481769e29f58f054b9ad1bc60d4c194e, type: 3}
 --- !u!1 &1439049619332925537 stripped
 GameObject:
@@ -336,6 +337,22 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &595113091303763050
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1439049619332925537}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6bf7dfdaa6191ce4c92e04a55ce00c35, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 30
+  damage: 1000
+  enemyHealthBarHolder: {fileID: 4235833901562002309, guid: f1f96f22f330a1648836012719552d9f, type: 3}
+  enemyType: 0
 --- !u!4 &1439049619332925539 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 9129870341428614306, guid: 481769e29f58f054b9ad1bc60d4c194e, type: 3}

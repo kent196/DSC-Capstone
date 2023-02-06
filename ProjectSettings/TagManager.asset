@@ -10,6 +10,7 @@ TagManager:
   - Spider
   - Heal Flower
   - FlowerProjectile
+  - UI
   layers:
   - Default
   - TransparentFX
@@ -25,9 +26,9 @@ TagManager:
   - Enemy
   - Bullet
   - EnemyBullet
-  - 
+  - Sign System
   - Fire Effect
-  - 
+  - Player Dash Hit
   - 
   - 
   - 

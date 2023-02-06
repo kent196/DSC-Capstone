@@ -8,20 +8,21 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager gameManager { get; private set; }
     public HealthStats playerHealth;
-    public HealthStats spiderHealth;
     public static bool GameIsPaused = false;
     public static bool GameHasEnded = false;
     [SerializeField] public GameObject pauseMenu;
     [SerializeField] public GameObject confirmBox;
     [SerializeField] public GameObject gui;
     [SerializeField] private GameObject endMenu;
+    private GameObject uiCanvas;
 
 
 
     private void Awake()
     {
+        uiCanvas = GameObject.FindGameObjectWithTag("UI");
+
         playerHealth = new HealthStats(1000, 1000);
-        spiderHealth = new HealthStats(50, 50);
         if (gameManager != null && gameManager != this)
         {
             Destroy(this);
@@ -37,12 +38,12 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
-        pauseMenu = FindObjectOfType<Canvas>().transform.Find("PauseMenu").gameObject;
+        pauseMenu = uiCanvas.transform.Find("PauseMenu").gameObject;
         pauseMenu.SetActive(false);
-        confirmBox = FindObjectOfType<Canvas>().transform.Find("ConfirmBox").gameObject;
+        confirmBox = uiCanvas.transform.Find("ConfirmBox").gameObject;
         confirmBox.SetActive(false);
-        gui = FindObjectOfType<Canvas>().transform.Find("GUI").gameObject;
-        endMenu = FindObjectOfType<Canvas>().transform.Find("EndMenu").gameObject;
+        gui = uiCanvas.transform.Find("GUI").gameObject;
+        endMenu = uiCanvas.transform.Find("EndMenu").gameObject;
         endMenu.SetActive(false);
 
     }
@@ -108,12 +109,12 @@ public class GameManager : MonoBehaviour
 
     public void EndGame()
     {
-        if (GameHasEnded == false)
-        {
-            Time.timeScale = 0f;
-            GameHasEnded = true;
-            endMenu.SetActive(true);
-        }
+        Time.timeScale = 0f;
+        GameHasEnded = true;
+        endMenu.SetActive(true);
+        //if (GameHasEnded == false)
+        //{
+        //}
     }
 
     public void Restart()
