@@ -7,6 +7,7 @@ using UnityEngine.SceneManagement;
 
 public class StartButton : MonoBehaviour
 {
+    private GameManager gamemanager;
     public void StartGame()
     {
         SceneManager.LoadScene("Map");

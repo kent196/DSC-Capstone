@@ -37,7 +37,6 @@ public class Projectiles : MonoBehaviour
             }
             anim.Play("Explode");
             hasHit = true;
-
         }
         else if (collision.gameObject.layer != 10 && collision.gameObject.CompareTag("Spider"))
         {

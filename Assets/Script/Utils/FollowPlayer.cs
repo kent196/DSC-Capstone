@@ -22,4 +22,8 @@ public class FollowPlayer : MonoBehaviour
     {
         transform.position = playerTransform.position + offSet;
     }
+
+
+    //__________________________________________________
+    
 }

@@ -33,7 +33,6 @@ public class PlayerMovement : MonoBehaviour
     }
     void Update()
     {
-        Debug.Log(canDash);
         moveX = Input.GetAxisRaw("Horizontal");
         
         if(Input.GetKeyDown(KeyCode.Space) && isGrounded())
@@ -113,9 +112,9 @@ public class PlayerMovement : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        if(other.CompareTag("Spider"))
+        if(other.CompareTag("Enemy"))
         {
-            other.gameObject.GetComponent<Spider>().TakeDamage(5);
+            other.gameObject.GetComponent<Spider>().TakeDamage(50);
         }
     }
 }

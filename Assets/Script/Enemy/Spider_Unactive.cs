@@ -7,7 +7,7 @@ public class Spider_Unactive : StateMachineBehaviour
     private Spider spider;
     private float healTime = .1f;
     private float currentHealTime;
-    [SerializeField] private EnemyHealthBar enemyHealthBar;
+    // [SerializeField] private EnemyHealthBar enemyHealthBar;
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {

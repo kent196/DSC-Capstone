@@ -20,7 +20,7 @@ public class Spider : MonoBehaviour
     [HideInInspector] public Vector3 playerPos;
     [HideInInspector] public GameObject player;
     public GameObject attackEffect;
-    [SerializeField] private EnemyHealthBar enemyHealthBar;
+    // [SerializeField] private EnemyHealthBar enemyHealthBar;
     // Start is called before the first frame update
     void Start()
     {
@@ -111,7 +111,7 @@ public class Spider : MonoBehaviour
     public void TakeDamage(int dmg)
     {
         health -= dmg;
-        enemyHealthBar.SetHealth(health, maxHealth);
+        // enemyHealthBar.SetHealth(health, maxHealth);
     }
     
     public void Destroy()
@@ -122,6 +122,6 @@ public class Spider : MonoBehaviour
     public void Heal(int heal)
     {
         health += heal;
-        enemyHealthBar.SetHealth(health, maxHealth);
+        // enemyHealthBar.SetHealth(health, maxHealth);
     }
 }

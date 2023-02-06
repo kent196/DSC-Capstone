@@ -4986,8 +4986,8 @@ MonoBehaviour:
   deceleration: 7
   velPower: 0.9
   frictionAmount: 0.2
-  jumpForce: 5
-  dashSpeed: 20
+  jumpForce: 10
+  dashSpeed: 25
   dashTime: 1
   checkGroundRaySize: {x: 0.6, y: 0.5, z: 0}
   offset: {x: 0, y: -0.7, z: 0}
