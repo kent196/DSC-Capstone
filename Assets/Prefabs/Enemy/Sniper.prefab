@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 5379657597880733355}
   - component: {fileID: -8858796198761214831}
   m_Layer: 11
-  m_Name: Enemy_Shotgun
+  m_Name: Sniper
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -106,8 +106,6 @@ MonoBehaviour:
   atkSFX: {fileID: -8858796198761214831}
   shotgunPrefab: {fileID: 2243399640391029315, guid: d8d998f77ba89904a87063c504128019, type: 3}
   chargeTime: 1
-  numberOfBullets: 10
-  spreadAngle: 10
   shotgunerAnim: {fileID: 0}
   player: {fileID: 0}
   playerBehaviour: {fileID: 0}
@@ -193,8 +191,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c58f172dae7def646b8c098fa451bea2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 0
   maxHealth: 300
+  damage: 1
+  enemyHealthBarHolder: {fileID: 4235833901562002309, guid: f1f96f22f330a1648836012719552d9f, type: 3}
+  enemyType: 2
 --- !u!82 &-8858796198761214831
 AudioSource:
   m_ObjectHideFlags: 0
