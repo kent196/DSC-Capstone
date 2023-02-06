@@ -12,9 +12,10 @@ public class UIBehavior : MonoBehaviour
 
     void Start()
     {
+
         volumeSlider.value = PlayerPrefs.GetFloat("volume");
     }
-    
+
     void Update()
     {
         audioMixer.SetFloat("volume", volumeValue);

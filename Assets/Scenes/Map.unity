@@ -7052,6 +7052,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: EndMenu
       objectReference: {fileID: 0}
+    - target: {fileID: 3332244677955490204, guid: c247b4af64e383d489df266fd521f8fa, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3332244677955490207, guid: c247b4af64e383d489df266fd521f8fa, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -8694,6 +8698,10 @@ PrefabInstance:
     - target: {fileID: 881497071537472329, guid: f8b0d53c106158a479cf05bb109bf7db, type: 3}
       propertyPath: m_Name
       value: ConfirmBox
+      objectReference: {fileID: 0}
+    - target: {fileID: 881497071537472329, guid: f8b0d53c106158a479cf05bb109bf7db, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 881497072166089324, guid: f8b0d53c106158a479cf05bb109bf7db, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -11990,10 +11998,34 @@ PrefabInstance:
       propertyPath: m_Name
       value: SettingMenu
       objectReference: {fileID: 0}
+    - target: {fileID: 1071091176887641077, guid: dd84aedf37badea44bd64d3ac22cd058, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1071091178058363211, guid: dd84aedf37badea44bd64d3ac22cd058, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: 688718515}
+    - target: {fileID: 5070577957638079635, guid: dd84aedf37badea44bd64d3ac22cd058, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 5070577957638079635, guid: dd84aedf37badea44bd64d3ac22cd058, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5070577958903364283, guid: dd84aedf37badea44bd64d3ac22cd058, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 5070577958903364283, guid: dd84aedf37badea44bd64d3ac22cd058, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5070577958903364283, guid: dd84aedf37badea44bd64d3ac22cd058, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0.75
+      objectReference: {fileID: 0}
     - target: {fileID: 5070577959347371383, guid: dd84aedf37badea44bd64d3ac22cd058, type: 3}
       propertyPath: m_Value
       value: -20
@@ -12072,6 +12104,10 @@ PrefabInstance:
     - target: {fileID: 7337997435560287914, guid: 50bf061cf790e9f4e9901632a8877dcc, type: 3}
       propertyPath: m_Name
       value: PopUpText
+      objectReference: {fileID: 0}
+    - target: {fileID: 7337997435560287914, guid: 50bf061cf790e9f4e9901632a8877dcc, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7337997435560287915, guid: 50bf061cf790e9f4e9901632a8877dcc, type: 3}
       propertyPath: m_Pivot.x
@@ -12169,6 +12205,10 @@ PrefabInstance:
     - target: {fileID: 7565076899177308526, guid: 624f26d216a920b4283ff5a92c5bfee9, type: 3}
       propertyPath: m_Name
       value: SupportPopUpText
+      objectReference: {fileID: 0}
+    - target: {fileID: 7565076899177308526, guid: 624f26d216a920b4283ff5a92c5bfee9, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7565076899177308527, guid: 624f26d216a920b4283ff5a92c5bfee9, type: 3}
       propertyPath: m_Pivot.x

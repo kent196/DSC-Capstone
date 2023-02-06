@@ -108,12 +108,12 @@ public class GameManager : MonoBehaviour
 
     public void EndGame()
     {
-        if (GameHasEnded == false)
-        {
-            Time.timeScale = 0f;
-            GameHasEnded = true;
-            endMenu.SetActive(true);
-        }
+        Time.timeScale = 0f;
+        GameHasEnded = true;
+        endMenu.SetActive(true);
+        //if (GameHasEnded == false)
+        //{
+        //}
     }
 
     public void Restart()
