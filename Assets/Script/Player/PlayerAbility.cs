@@ -14,6 +14,7 @@ public class PlayerAbility : MonoBehaviour
     private Vector2 rotatePosition;
     private Vector2 mousePosition;
     private Vector2 fireDirection;
+    private Vector3 offset;
 
     private float angle;
     private float launchForce = 10f;
@@ -25,6 +26,7 @@ public class PlayerAbility : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        offset = Vector3.zero;
         playerBehaviour = FindObjectOfType<PlayerBehaviour>();
         lr = GetComponent<LineRenderer>();
         attackTimer = 0f;
@@ -34,7 +36,6 @@ public class PlayerAbility : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
         attackTimer -= Time.deltaTime;
         GetDirection();
         if (attackTimer < .1f)
@@ -53,7 +54,17 @@ public class PlayerAbility : MonoBehaviour
         fireDirection.Normalize();
 
         angle = Mathf.Atan2(fireDirection.y, fireDirection.x) * Mathf.Rad2Deg;
+        if(angle<90 && angle > -90)
+        {
+            offset = new Vector3(0,.4f, 0);
+        }
+        else
+        {
+            offset = Vector3.zero;
+        }
         rotatePoint.rotation = Quaternion.Euler(0, 0, angle);
+
+
     }
     void RangeAttack()
     {
@@ -83,11 +94,11 @@ public class PlayerAbility : MonoBehaviour
     {
         if (attackTimer < .1f)
         {
-            atkSFX.Play();
+            //atkSFX.Play();
 
             playerBehaviour.TakeDamage(10);
-            GameObject newProjectile = Instantiate(projectile, rotatePoint.position, rotatePoint.rotation);
-            newProjectile.GetComponent<Rigidbody2D>().velocity = rotatePoint.right * launchForce;
+            GameObject newProjectile = Instantiate(projectile, rotatePoint.position + offset , rotatePoint.rotation);
+            newProjectile.GetComponent<Rigidbody2D>().AddForce(fireDirection * launchForce,ForceMode2D.Impulse);
             attackTimer = 1f;
 
         }
