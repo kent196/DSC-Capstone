@@ -37,11 +37,6 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
         moveX = Input.GetAxisRaw("Horizontal");
-        
-        if(Input.GetKeyDown(KeyCode.R))
-        {
-            PlayerPrefs.DeleteAll();
-        }
 
         if(Input.GetKeyDown(KeyCode.Space) && isGrounded() && canJump)
         {

@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 6025363158655360574}
   m_Layer: 11
   m_Name: Shotgun
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -281,7 +281,9 @@ MonoBehaviour:
   homePos: 0
   patrolPointRight: {fileID: 4532083633790596750}
   patrolPointLeft: {fileID: 4532083634665175697}
-  attackRantge: {x: 8, y: 1}
+  attackRange: {x: 8, y: 1.5}
+  lookRange: {x: 12, y: 1.5}
+  attackCooldown: 0
 --- !u!1 &4532083633790596751
 GameObject:
   m_ObjectHideFlags: 0

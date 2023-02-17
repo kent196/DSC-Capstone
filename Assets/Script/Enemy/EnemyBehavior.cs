@@ -60,20 +60,6 @@ public class EnemyBehavior : MonoBehaviour
     [SerializeField] public LayerMask playerLayer;
     void Awake()
     {
-        isDead = (PlayerPrefs.GetInt(gameObject.name + "_isDead") == 1);
-
-        if(isDead)
-        {
-            if(transform.parent == null)
-            {
-                Destroy(gameObject);
-            }
-            else
-            {
-                Destroy(transform.parent.gameObject);
-            }
-        }
-
         rb = this.gameObject.GetComponent<Rigidbody2D>();
         animator = this.gameObject.GetComponent<Animator>();
 
@@ -131,12 +117,6 @@ public class EnemyBehavior : MonoBehaviour
             TakeDamage(5);
             animator.SetTrigger("isHit");
         }
-    }
-
-    private void OnDestroy()
-    {
-        PlayerPrefs.SetInt(gameObject.name + "_isDead", isDead? 1 : 0);
-        PlayerPrefs.Save();
     }
 
     //Detect player
@@ -234,7 +214,6 @@ public class EnemyBehavior : MonoBehaviour
 
     public void IgnorePlayerCollsion(bool isIgnore)
     {
-        Debug.Log("Ignore: " + isIgnore);
         IgnoreCollsionOf(this.gameObject, player, isIgnore);
     }
 

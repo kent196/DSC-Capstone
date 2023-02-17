@@ -10,7 +10,6 @@ public class Spider : EnemyBehavior
     [SerializeField] public Vector3 attackRange = new Vector3(5f, 2f, 1f);
     [SerializeField] public float homeMaxDistance = 20f;
     [HideInInspector] public Vector3 homePos;
-    public GameObject attackEffect;
 
     // Start is called before the first frame update
     void Start()
