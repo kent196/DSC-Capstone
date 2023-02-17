@@ -24,11 +24,4 @@ public class EnemyShotgunBehavior : EnemyBehavior
             // isDead = true;
         }
     }
-    private void OnTriggerEnter2D(Collider2D other)
-    {
-        if(other.CompareTag("Player"))
-        {
-            animator.SetTrigger("isHit");
-        }
-    }
 }

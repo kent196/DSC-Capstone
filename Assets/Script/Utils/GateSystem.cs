@@ -14,6 +14,9 @@ public class GateSystem : MonoBehaviour
     public GameObject[] obelisk;
 
     [SerializeField] private bool allActivated = false;
+
+    
+    private BoxCollider[] colliders;
     // Start is called before the first frame update
     void Start()
     {
@@ -25,6 +28,7 @@ public class GateSystem : MonoBehaviour
             obeliskController[i] = obelisk[i].GetComponent<ObeliskController>();
         }
         anim = GetComponent<Animator>();
+        colliders = GetComponents<BoxCollider>();
     }
 
     // Update is called once per frame
@@ -37,6 +41,27 @@ public class GateSystem : MonoBehaviour
         }
     }
 
+    void Update()
+    {
+        float animatorState = anim.GetCurrentAnimatorStateInfo(0).normalizedTime;
+
+        // Enable colliders when the door is open
+        if (animatorState > 0.99f)
+        {
+            foreach (BoxCollider collider in colliders)
+            {
+                collider.enabled = false;
+            }
+        }
+        // Disable colliders when the door is closed
+        else
+        {
+            foreach (BoxCollider collider in colliders)
+            {
+                collider.enabled = true;
+            }
+        }
+    }
 
     private void GetObeliskState()
     {

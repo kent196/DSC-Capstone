@@ -68,7 +68,7 @@ public class PlayerBehaviour : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Heal Flower"))
         {
-            Heal(200);
+            Heal(350);
             healthBar.SetHealth(GameManager.gameManager.playerHealth.Health);
         }
 

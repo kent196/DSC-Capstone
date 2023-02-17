@@ -9,6 +9,7 @@ public class PauseMenu : MonoBehaviour
     [SerializeField] public GameObject pauseMenu;
     [SerializeField] public GameObject confirmBox;
     [SerializeField] public GameObject gui;
+    private PopUpSystem popUpSystem;
 
     private void Start()
     {

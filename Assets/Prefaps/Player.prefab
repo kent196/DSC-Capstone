@@ -4987,12 +4987,13 @@ MonoBehaviour:
   deceleration: 7
   velPower: 0.9
   frictionAmount: 0.2
-  jumpForce: 10
-  dashSpeed: 25
+  jumpForce: 7.5
+  dashSpeed: 15
   dashTime: 1
   checkGroundRaySize: {x: 0.6, y: 0.5, z: 0}
   offset: {x: 0, y: -0.7, z: 0}
   dashHit: {fileID: 1675915890}
+  canJump: 1
 --- !u!50 &4578349420997085898
 Rigidbody2D:
   serializedVersion: 4
