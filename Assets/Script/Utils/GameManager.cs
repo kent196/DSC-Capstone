@@ -32,6 +32,7 @@ public class GameManager : MonoBehaviour
         }
         else
         {
+            DontDestroyOnLoad(this.gameObject);
             gameManager = this;
         }
         Debug.Log("GM : "+playerHealth.Health + GameHasEnded + GameIsPaused +gameManager+Time.timeScale);
@@ -42,12 +43,12 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
-        pauseMenu = uiCanvas.transform.Find("PauseMenu").gameObject;
+        // pauseMenu = uiCanvas.transform.Find("PauseMenu").gameObject;
         pauseMenu.SetActive(false);
-        confirmBox = uiCanvas.transform.Find("ConfirmBox").gameObject;
+        // confirmBox = uiCanvas.transform.Find("ConfirmBox").gameObject;
         confirmBox.SetActive(false);
-        gui = uiCanvas.transform.Find("GUI").gameObject;
-        endMenu = uiCanvas.transform.Find("EndMenu").gameObject;
+        // gui = uiCanvas.transform.Find("GUI").gameObject;
+        // endMenu = uiCanvas.transform.Find("EndMenu").gameObject;
         endMenu.SetActive(false);
 
     }

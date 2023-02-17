@@ -23,7 +23,7 @@ public class PopUpSystem : MonoBehaviour
             if (!dialogueBox.activeInHierarchy)
             {
                 if (Input.GetKeyDown(KeyCode.Space))
-                {
+                {Debug.Log("bủh bủh lmao");
                     Time.timeScale = 0;
                     dialogueBox.SetActive(true);
                     dialogueText.text = dialogue;
@@ -31,10 +31,10 @@ public class PopUpSystem : MonoBehaviour
             }
             else
             {
-                if(Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.Escape))
-                {
+                if (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.Escape))
+                {Debug.Log("bủh bủh");
                     Time.timeScale = 1;
-                    dialogueBox.SetActive(false);               
+                    dialogueBox.SetActive(false);
                 }
             }
         }
@@ -44,7 +44,12 @@ public class PopUpSystem : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            other.GetComponent<PlayerMovement>().canJump = false;
+            PlayerMovement playerMovement = other.GetComponent<PlayerMovement>();
+            if (playerMovement != null)
+            {
+                playerMovement.canJump = false;
+            }
+            
             playerInRange = true;
         }
     }
@@ -54,7 +59,12 @@ public class PopUpSystem : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             playerInRange = false;
-            other.GetComponent<PlayerMovement>().canJump = true;
+            PlayerMovement playerMovement = other.GetComponent<PlayerMovement>();
+            if (playerMovement != null)
+            {
+                playerMovement.canJump = true;
+            }
+            
             dialogueBox.SetActive(false);
         }
     }
