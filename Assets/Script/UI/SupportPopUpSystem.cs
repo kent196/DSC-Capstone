@@ -20,6 +20,8 @@ public class SupportPopUpSystem : MonoBehaviour
     {
         if (playerInRange)
         {
+            dialogueBox.SetActive(true);
+            dialogueText.text = dialogue;
             if(Input.GetKeyDown(KeyCode.Space))
             {
                 dialogueBox.SetActive(false);

@@ -14,9 +14,12 @@ public class GameManager : MonoBehaviour
     [SerializeField] public GameObject confirmBox;
     [SerializeField] public GameObject gui;
     [SerializeField] private GameObject endMenu;
+
+    [SerializeField] private GameObject completeGameUI;
     private GameObject uiCanvas;
 
-
+    
+    
 
     private void Awake()
     {
@@ -137,5 +140,10 @@ public class GameManager : MonoBehaviour
             GameHasEnded = false;
             SceneManager.LoadScene("Start");
         }
+    }
+
+    public void CompleteLevel()
+    {
+        completeGameUI.SetActive(true);
     }
 }
