@@ -20,22 +20,19 @@ public class GameManager : MonoBehaviour
 
     private void Awake()
     {
-
         uiCanvas = GameObject.FindGameObjectWithTag("UI");
         GameIsPaused = false;
         GameHasEnded = false;
         Time.timeScale = 1;
         playerHealth = new HealthStats(1000, 1000);
-        if (gameManager != null && gameManager != this)
+        if (gameManager != null)
         {
-            Destroy(this);
+            Destroy(this.gameObject);
         }
         else
         {
-            DontDestroyOnLoad(this.gameObject);
             gameManager = this;
         }
-        Debug.Log("GM : "+playerHealth.Health + GameHasEnded + GameIsPaused +gameManager+Time.timeScale);
     }
 
 
@@ -43,12 +40,13 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
-        // pauseMenu = uiCanvas.transform.Find("PauseMenu").gameObject;
+        pauseMenu = uiCanvas.transform.Find("PauseMenu").gameObject;
+        confirmBox = uiCanvas.transform.Find("ConfirmBox").gameObject;
+        gui = uiCanvas.transform.Find("GUI").gameObject;
+        endMenu = uiCanvas.transform.Find("EndMenu").gameObject;
+        
         pauseMenu.SetActive(false);
-        // confirmBox = uiCanvas.transform.Find("ConfirmBox").gameObject;
         confirmBox.SetActive(false);
-        // gui = uiCanvas.transform.Find("GUI").gameObject;
-        // endMenu = uiCanvas.transform.Find("EndMenu").gameObject;
         endMenu.SetActive(false);
 
     }

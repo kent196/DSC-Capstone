@@ -13,17 +13,19 @@ public class PopUpSystem : MonoBehaviour
 
     void Start()
     {
-
+        Physics2D.IgnoreLayerCollision(14,16,true);
+        Physics2D.IgnoreLayerCollision(12,16,true);
     }
 
     void Update()
     {
+        // Debug.Log(playerInRange);
         if (playerInRange)
         {
             if (!dialogueBox.activeInHierarchy)
             {
                 if (Input.GetKeyDown(KeyCode.Space))
-                {Debug.Log("bủh bủh lmao");
+                {
                     Time.timeScale = 0;
                     dialogueBox.SetActive(true);
                     dialogueText.text = dialogue;
@@ -31,8 +33,8 @@ public class PopUpSystem : MonoBehaviour
             }
             else
             {
-                if (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.Escape))
-                {Debug.Log("bủh bủh");
+                if(Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.Escape))
+                {
                     Time.timeScale = 1;
                     dialogueBox.SetActive(false);
                 }
@@ -44,13 +46,10 @@ public class PopUpSystem : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            PlayerMovement playerMovement = other.GetComponent<PlayerMovement>();
-            if (playerMovement != null)
-            {
-                playerMovement.canJump = false;
-            }
-            
             playerInRange = true;
+            PlayerMovement playerMovement = other.GetComponent<PlayerMovement>();
+            playerMovement.canJump = false;
+            
         }
     }
 
@@ -60,10 +59,9 @@ public class PopUpSystem : MonoBehaviour
         {
             playerInRange = false;
             PlayerMovement playerMovement = other.GetComponent<PlayerMovement>();
-            if (playerMovement != null)
-            {
-                playerMovement.canJump = true;
-            }
+
+            playerMovement.canJump = true;
+            
             
             dialogueBox.SetActive(false);
         }

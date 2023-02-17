@@ -234,10 +234,7 @@ public class EnemyBehavior : MonoBehaviour
 
     public void IgnorePlayerCollsion(bool isIgnore)
     {
-        if(player == null)
-        {
-            return;
-        }
+        Debug.Log("Ignore: " + isIgnore);
         IgnoreCollsionOf(this.gameObject, player, isIgnore);
     }
 

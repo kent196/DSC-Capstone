@@ -10,31 +10,36 @@ public class Shotgun_Hit : StateMachineBehaviour
     {
        shotgun = animator.GetComponent<Shotgun>();
        shotgun.IgnorePlayerCollsion(true);
-
+        shotgun.lookRange.x = shotgun.lookRange.x * 2;
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-       
+       if(shotgun.Health <= 0)
+        {
+            animator.SetTrigger("dead");
+        }
+        else 
+        {
+            if(shotgun.isPlayerInAttackBox(shotgun.attackRange))
+            {
+                animator.SetTrigger("attack");
+            }
+            else
+            {
+            animator.SetTrigger("walk");
+            }
+        }
     }
 
     // OnStateExit is called when a transition ends and the state machine finishes evaluating this state
     override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         shotgun.IgnorePlayerCollsion(false);
-
-        if(shotgun.Health <= 0)
-        {
-            animator.SetTrigger("dead");
-        }
-        if(shotgun.isPlayerInAttackBox(shotgun.attackRantge))
-        {
-         animator.SetTrigger("attack");
-        }
-        else
-        {
-            animator.SetTrigger("walk");
-        }
+        shotgun.lookRange.x = shotgun.lookRange.x / 2;
+        
+        
+        
     }
 }

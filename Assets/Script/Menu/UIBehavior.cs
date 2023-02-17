@@ -12,7 +12,6 @@ public class UIBehavior : MonoBehaviour
 
     void Start()
     {
-
         volumeSlider.value = PlayerPrefs.GetFloat("volume");
     }
 

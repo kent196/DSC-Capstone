@@ -46,8 +46,6 @@ public class PlayerBehaviour : MonoBehaviour
         }
     }
 
-
-
     public void TakeDamage(float dmgAmount)
     {
         //some conditon
