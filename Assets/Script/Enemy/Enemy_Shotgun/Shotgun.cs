@@ -11,7 +11,9 @@ public class Shotgun : EnemyBehavior
     [SerializeField] private Transform patrolPointLeft;
     private Vector3 patrolPointRightPos;
     private Vector3 patrolPointLeftPos;
-    [SerializeField] public Vector2 attackRantge;
+    [SerializeField] public Vector2 attackRange;
+    [SerializeField] public Vector2 lookRange;
+    [SerializeField] public float attackCooldown;
     // Start is called before the first frame update
     void Start()
     {
@@ -25,7 +27,7 @@ public class Shotgun : EnemyBehavior
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     public float distanceToHomePos()
@@ -33,26 +35,40 @@ public class Shotgun : EnemyBehavior
         return transform.position.x - homePos;
     }
 
-    public bool isReachDestination()
+    public void ChasePlayer()
+    {
+        destination.x = playerPos.x;
+        
+        FlipEnemyTo(destination);
+        MoveTo(destination);
+    }
+
+    public void Patrol()
     {
         if(transform.position.x >= patrolPointRightPos.x)
         {
+            animator.SetTrigger("idle");
             destination.x = patrolPointLeftPos.x;
-            return true;
         }
         else if(transform.position.x <= patrolPointLeftPos.x)
         {
+            animator.SetTrigger("idle");
             destination.x = patrolPointRightPos.x;
-            return true;
         }
-        else
-        {
-            return false;
-        }
+
+        MoveTo(destination);
+    }
+
+    public void MoveTo(Vector3 destination)
+    {
+        transform.position = Vector3.MoveTowards(animator.transform.position, new Vector3(destination.x, animator.transform.position.y, 0), moveSpeed * Time.deltaTime);
     }
 
     private void OnDrawGizmos() {
         Gizmos.color = Color.red;
-        Gizmos.DrawWireCube(transform.position, attackRantge);
+        Gizmos.DrawWireCube(transform.position, attackRange);
+
+        Gizmos.color = Color.yellow;
+        Gizmos.DrawWireCube(transform.position, lookRange);
     }
 }

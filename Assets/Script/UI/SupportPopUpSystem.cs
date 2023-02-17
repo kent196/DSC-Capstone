@@ -13,7 +13,7 @@ public class SupportPopUpSystem : MonoBehaviour
 
     void Start()
     {
-        
+
     }
 
     void Update()

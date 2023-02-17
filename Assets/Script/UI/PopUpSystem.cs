@@ -49,7 +49,7 @@ public class PopUpSystem : MonoBehaviour
             playerInRange = true;
             PlayerMovement playerMovement = other.GetComponent<PlayerMovement>();
             playerMovement.canJump = false;
-
+            
         }
     }
 
@@ -61,8 +61,8 @@ public class PopUpSystem : MonoBehaviour
             PlayerMovement playerMovement = other.GetComponent<PlayerMovement>();
 
             playerMovement.canJump = true;
-
-
+            
+            
             dialogueBox.SetActive(false);
         }
     }

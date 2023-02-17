@@ -117,12 +117,4 @@ public class PlayerMovement : MonoBehaviour
         yield return new WaitUntil(() => isGrounded());
         canDash = true;
     }
-
-    void OnTriggerEnter2D(Collider2D other)
-    {
-        if(other.CompareTag("Enemy"))
-        {
-            other.gameObject.GetComponent<Spider>().TakeDamage(50);
-        }
-    }
 }
