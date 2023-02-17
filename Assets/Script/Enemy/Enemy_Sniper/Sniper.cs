@@ -2,26 +2,23 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyShotgunBehavior : EnemyBehavior
+public class Sniper : EnemyBehavior
 {
-    // private bool isDead = false;
+    [SerializeField] public float attackRadius;
     // Start is called before the first frame update
     void Start()
     {
-
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-        Dead();
+
     }
 
-    public void Dead()
-    {
-        if (Health <= 0)
-        {
-            // isDead = true;
-        }
+    private void OnDrawGizmos() {
+        Gizmos.color = Color.yellow;
+        Gizmos.DrawWireSphere(transform.position, attackRadius);
     }
 }

@@ -8,11 +8,17 @@ public class EnemyHealthBar : MonoBehaviour
     [SerializeField] private Slider slider;
     [SerializeField] private Color low;
     [SerializeField] private Color high;
-    [SerializeField] private Vector3 offSet;
+    private float healthBarYOffSet;
+
+    public float HealthBarrYOffSet
+    {
+        get{return healthBarYOffSet;}
+        set{healthBarYOffSet = value;}
+    }
 
     void Update()
     {
-        slider.transform.position = Camera.main.WorldToScreenPoint(transform.parent.position + offSet);
+        slider.transform.position = Camera.main.WorldToScreenPoint(transform.parent.position + new Vector3(0, healthBarYOffSet, 0));
     }
 
     public void SetHealth(float health, float maxHealth)

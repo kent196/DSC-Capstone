@@ -2,43 +2,28 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Spider_Hit : StateMachineBehaviour
+public class Sniper_Attack : StateMachineBehaviour
 {
-    private Spider spider;
-    [SerializeField] private float multiplyLookrange = 3;
-    
+    private Sniper sniper;
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        spider = animator.GetComponent<Spider>();
-        spider.currentLookRange.x = spider.lookRange.x * multiplyLookrange;
-        
-        spider.IgnorePlayerCollsion(true);
+        sniper = animator.GetComponent<Sniper>();
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        spider.FlipEnemyTo(spider.playerPos);
-        if(spider.isPlayerInAttackBox(spider.attackRange))
+        sniper.FlipEnemyTo(sniper.playerPos);
+        if(!sniper.isPlayerInAttackCircle(sniper.attackRadius) || !sniper.isRaycastHit(sniper.transform.position, sniper.playerPos, "Player"))
         {
-            animator.SetTrigger("attack");
-        }
-        else
-        {
-            animator.SetTrigger("walk");
+            animator.SetTrigger("unactive");
         }
     }
 
     // OnStateExit is called when a transition ends and the state machine finishes evaluating this state
     override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        spider.IgnorePlayerCollsion(false);
-
-        if(spider.Health <= 0)
-        {
-            animator.SetTrigger("dead");
-            animator.SetBool("isDead", true);
-        }
+        
     }
 }

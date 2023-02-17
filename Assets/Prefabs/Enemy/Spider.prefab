@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 5020735875911821506}
   m_Layer: 11
   m_Name: Spider
-  m_TagString: Spider
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -172,18 +172,19 @@ MonoBehaviour:
   maxHealth: 50
   damage: 0.2
   enemyHealthBarHolder: {fileID: 4235833901562002309, guid: f1f96f22f330a1648836012719552d9f, type: 3}
-  enemyType: 0
-  moveSpeed: 3
+  healthbarYOffset: 0.1
+  player: {fileID: 0}
+  playerPos: {x: 0, y: 0, z: 0}
+  enemyPos: {x: 0, y: 0, z: 0}
   playerLayer:
     serializedVersion: 2
     m_Bits: 1024
-  lookRange: {x: 10, y: 2, z: 1}
+  moveSpeed: 3
+  lookRange: {x: 10, y: 3, z: 1}
   currentLookRange: {x: 0, y: 0, z: 0}
-  attackRange: {x: 1, y: 2, z: 1}
+  attackRange: {x: 1, y: 3, z: 1}
   homeMaxDistance: 20
   homePos: {x: 0, y: 0, z: 0}
-  playerPos: {x: 0, y: 0, z: 0}
-  player: {fileID: 0}
   attackEffect: {fileID: 5020735877255613552}
 --- !u!114 &5020735875911821506
 MonoBehaviour:

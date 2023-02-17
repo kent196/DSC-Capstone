@@ -24,8 +24,8 @@ public class Spider_Walk : StateMachineBehaviour
             isGoToHome = true;
             walkDestination = spider.homePos;
         }
-        if(spider.isPlayerInLookZone() && !isGoToHome)
-        {
+        if(spider.isPlayerInLookBox(spider.currentLookRange) && !isGoToHome && spider.isRaycastHit(spider.transform.position, spider.playerPos, "Player"))
+        { 
             walkDestination = spider.playerPos;
         }
         else 
@@ -38,12 +38,12 @@ public class Spider_Walk : StateMachineBehaviour
             }
         }
 
-        if(spider.isPlayerInAttackZone())
+        if(spider.isPlayerInAttackBox(spider.attackRange))
         {
             animator.SetTrigger("attack");
         }
 
-        spider.FlipSpiderTo(walkDestination);
+        spider.FlipEnemyTo(walkDestination);
         animator.transform.position = Vector3.MoveTowards(animator.transform.position, walkDestination, spider.moveSpeed * Time.deltaTime);
     }
 

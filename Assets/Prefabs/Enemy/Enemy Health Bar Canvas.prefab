@@ -300,13 +300,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 3227594004926227910}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e76b6555e158f2499880325ef28f3c5, type: 3}
+  m_Script: {fileID: 11500000, guid: d7977edb55622714a954021f4387fa9b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   slider: {fileID: 1310048188214235351}
-  low: {r: 0.5283019, g: 0.08223568, b: 0.08223568, a: 1}
+  low: {r: 0.4339623, g: 0, b: 0, a: 1}
   high: {r: 1, g: 0, b: 0, a: 1}
-  offSet: {x: 0, y: 0.1, z: 0}
 --- !u!1 &6985213394513329031
 GameObject:
   m_ObjectHideFlags: 0

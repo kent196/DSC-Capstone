@@ -18,7 +18,7 @@ public class Spider_Attack : StateMachineBehaviour
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        spider.FlipSpiderTo(spider.playerPos);
+        spider.FlipEnemyTo(spider.playerPos);
         
         spider.attackEffect.transform.position = spider.playerPos - new Vector3(0,0.1f,0);
 
@@ -27,7 +27,7 @@ public class Spider_Attack : StateMachineBehaviour
             DealDamage();
         }
 
-        if(!spider.isPlayerInAttackZone())
+        if(!spider.isPlayerInAttackBox(spider.attackRange))
         {
             animator.SetTrigger("walk");
         }

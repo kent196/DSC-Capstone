@@ -20,8 +20,11 @@ public class GameManager : MonoBehaviour
 
     private void Awake()
     {
-        uiCanvas = GameObject.FindGameObjectWithTag("UI");
 
+        uiCanvas = GameObject.FindGameObjectWithTag("UI");
+        GameIsPaused = false;
+        GameHasEnded = false;
+        Time.timeScale = 1;
         playerHealth = new HealthStats(1000, 1000);
         if (gameManager != null && gameManager != this)
         {
@@ -31,6 +34,7 @@ public class GameManager : MonoBehaviour
         {
             gameManager = this;
         }
+        Debug.Log("GM : "+playerHealth.Health + GameHasEnded + GameIsPaused +gameManager+Time.timeScale);
     }
 
 
