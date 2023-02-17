@@ -14,7 +14,7 @@ public class Spider_Prep_Attack : StateMachineBehaviour
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        spider.FlipSpiderTo(spider.playerPos);
+        spider.FlipEnemyTo(spider.playerPos);
     }
 
     // OnStateExit is called when a transition ends and the state machine finishes evaluating this state

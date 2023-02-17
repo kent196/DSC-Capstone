@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Sniperr_atk
+  m_Name: Sniper_Attack
   serializedVersion: 6
   m_Legacy: 0
   m_Compressed: 0
@@ -35,8 +35,6 @@ AnimationClip:
       value: {fileID: 1559089421, guid: 8a100d58a78d6724eaec9135e968ed71, type: 3}
     - time: 1
       value: {fileID: -655772207, guid: 8a100d58a78d6724eaec9135e968ed71, type: 3}
-    - time: 1.1428572
-      value: {fileID: 220260202, guid: 28e598cb88156844d8580d5157355cd6, type: 3}
     attribute: m_Sprite
     path: 
     classID: 212
@@ -64,13 +62,12 @@ AnimationClip:
     - {fileID: 2137668836, guid: 8a100d58a78d6724eaec9135e968ed71, type: 3}
     - {fileID: 1559089421, guid: 8a100d58a78d6724eaec9135e968ed71, type: 3}
     - {fileID: -655772207, guid: 8a100d58a78d6724eaec9135e968ed71, type: 3}
-    - {fileID: 220260202, guid: 28e598cb88156844d8580d5157355cd6, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 1.2857144
+    m_StopTime: 1.1428572
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
@@ -91,7 +88,7 @@ AnimationClip:
   m_HasMotionFloatCurves: 0
   m_Events:
   - time: 0.71428573
-    functionName: Shoot
+    functionName: TakePlayerDamage
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0

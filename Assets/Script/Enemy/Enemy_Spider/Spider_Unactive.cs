@@ -7,12 +7,10 @@ public class Spider_Unactive : StateMachineBehaviour
     private Spider spider;
     private float healTime = .1f;
     private float currentHealTime;
-    // [SerializeField] private EnemyHealthBar enemyHealthBar;
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         spider = animator.GetComponent<Spider>();
-        spider.currentLookRange = spider.lookRange;
         currentHealTime = healTime;
     }
 
@@ -35,10 +33,13 @@ public class Spider_Unactive : StateMachineBehaviour
         {
             spider.Health = spider.MaxHealth;
         }
-        if(spider.isPlayerInLookZone())
+        if(spider.isPlayerInLookBox(spider.currentLookRange))
         {
-            spider.FlipSpiderTo(spider.playerPos);
-            animator.SetTrigger("active");
+            if(spider.isRaycastHit(spider.transform.position, spider.playerPos, "Player"))
+            {
+                spider.FlipEnemyTo(spider.playerPos);
+                animator.SetTrigger("active");
+            }
         }
     }
 

@@ -2,14 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Spider_Death : StateMachineBehaviour
+public class Shotgun_Dead : StateMachineBehaviour
 {
-    private Spider spider;
+    private Shotgun shotgun;
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        spider = animator.GetComponent<Spider>();
-        spider.WhenEnemyDead();
+       shotgun = animator.GetComponent<Shotgun>();
+       shotgun.WhenEnemyDead();
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
