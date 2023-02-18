@@ -21,7 +21,6 @@ public class FlowerBehaviour : EnemyBehavior
         if (Health <= 0)
         {
             IsDead = true;
-            WhenEnemyDead();
             GetComponentInChildren<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezePosition;
             Animator.SetTrigger("isDead");
         }

@@ -169,8 +169,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a9b7d259b5a54254faf8ead358c5d419, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 50
-  damage: 0.2
+  maxHealth: 25
+  damage: 1
   enemyHealthBarHolder: {fileID: 4235833901562002309, guid: f1f96f22f330a1648836012719552d9f, type: 3}
   healthbarYOffset: 0.1
   player: {fileID: 0}

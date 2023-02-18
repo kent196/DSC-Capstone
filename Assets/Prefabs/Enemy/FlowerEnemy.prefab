@@ -165,6 +165,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Flower
       objectReference: {fileID: 0}
+    - target: {fileID: 9129870341428614304, guid: 481769e29f58f054b9ad1bc60d4c194e, type: 3}
+      propertyPath: m_TagString
+      value: Enemy
+      objectReference: {fileID: 0}
     - target: {fileID: 9129870341428614306, guid: 481769e29f58f054b9ad1bc60d4c194e, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -350,9 +354,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 30
-  damage: 1000
+  damage: 20
   enemyHealthBarHolder: {fileID: 4235833901562002309, guid: f1f96f22f330a1648836012719552d9f, type: 3}
-  enemyType: 0
+  healthbarYOffset: 0
+  player: {fileID: 0}
+  playerPos: {x: 0, y: 0, z: 0}
+  enemyPos: {x: 0, y: 0, z: 0}
+  playerLayer:
+    serializedVersion: 2
+    m_Bits: 1024
 --- !u!4 &1439049619332925539 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 9129870341428614306, guid: 481769e29f58f054b9ad1bc60d4c194e, type: 3}

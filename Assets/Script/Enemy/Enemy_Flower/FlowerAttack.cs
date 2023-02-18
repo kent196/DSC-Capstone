@@ -16,7 +16,7 @@ public class FlowerAttack : MonoBehaviour
     public GameObject[] detector;
     public FlowerDetector[] flowerDetector;
     float projectileForce = 10f;
-    private float attackCooldown = 1f;
+    private float attackCooldown = 2f;
     private FlowerBehaviour flowerBehaviour;
     // Start is called before the first frame update
     void Start()
@@ -78,7 +78,7 @@ public class FlowerAttack : MonoBehaviour
         if (attackCooldown < .1f)
         {
             LaunchProjectile();
-            attackCooldown = 1f;
+            attackCooldown = 2f;
         }
     }
     Vector2 CalculateVelocity(Vector2 target, Vector2 origin, float force)

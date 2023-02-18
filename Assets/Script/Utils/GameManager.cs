@@ -27,7 +27,7 @@ public class GameManager : MonoBehaviour
         GameIsPaused = false;
         GameHasEnded = false;
         Time.timeScale = 1;
-        playerHealth = new HealthStats(1000, 1000);
+        playerHealth = new HealthStats(2000, 2000);
         if (gameManager != null)
         {
             Destroy(this.gameObject);
