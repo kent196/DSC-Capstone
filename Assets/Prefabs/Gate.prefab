@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 3947820427794923261}
   - component: {fileID: 3947820427794923259}
   - component: {fileID: 3947820427794923256}
+  - component: {fileID: 7491900474733765531}
   m_Layer: 0
   m_Name: Gate
   m_TagString: Untagged
@@ -118,5 +119,34 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bfb117ccb7bcb724a947cba1f839b806, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  obeliskState: 0
-  obelisk: {fileID: 0}
+  obeliskState: 
+  obelisk:
+  - {fileID: 0}
+  allActivated: 0
+--- !u!114 &7491900474733765531
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3947820427794923260}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7db70e0ea77f5ac47a8f4565a9406397, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ShadowGroup: 0
+  m_ComponentVersion: 1
+  m_HasRenderer: 1
+  m_UseRendererSilhouette: 1
+  m_CastsShadows: 1
+  m_SelfShadows: 0
+  m_ApplyToSortingLayers: 297ac6deb3ad739400000000
+  m_ShapePath:
+  - {x: -0.16331959, y: -1.4985554, z: 0}
+  - {x: -0.15538096, y: 1.5070671, z: 0}
+  - {x: 0.08701587, y: 1.4994234, z: 0}
+  - {x: 0.091058254, y: -1.4969716, z: 0}
+  m_ShapePathHash: 1180675029
+  m_Mesh: {fileID: 0}
+  m_InstanceId: 1429154
