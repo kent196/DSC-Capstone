@@ -24,12 +24,6 @@ public class Shotgun : EnemyBehavior
         patrolPointLeftPos = patrolPointLeft.position;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
-
     public float distanceToHomePos()
     {
         return transform.position.x - homePos;

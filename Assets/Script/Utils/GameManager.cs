@@ -51,7 +51,6 @@ public class GameManager : MonoBehaviour
         pauseMenu.SetActive(false);
         confirmBox.SetActive(false);
         endMenu.SetActive(false);
-
     }
 
     // Update is called once per frame
