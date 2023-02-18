@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 1755917471671109670}
   - component: {fileID: 1755917471671109665}
   - component: {fileID: 1755917471671109664}
-  - component: {fileID: 5870019258094652482}
   m_Layer: 0
   m_Name: Elevator_Khoi
   m_TagString: Untagged
@@ -152,30 +151,3 @@ MonoBehaviour:
   elevatorActivated: 0
   elevatorSpeed: 3
   player: {fileID: 0}
---- !u!114 &5870019258094652482
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1755917471996629248}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7db70e0ea77f5ac47a8f4565a9406397, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_ShadowGroup: 0
-  m_ComponentVersion: 1
-  m_HasRenderer: 1
-  m_UseRendererSilhouette: 1
-  m_CastsShadows: 1
-  m_SelfShadows: 1
-  m_ApplyToSortingLayers: 297ac6deb3ad739400000000
-  m_ShapePath:
-  - {x: -0.13999999, y: -0.20499992, z: 0}
-  - {x: -0.14001559, y: -0.17369457, z: 0}
-  - {x: 0.14003049, y: -0.17458805, z: 0}
-  - {x: 0.14000002, y: -0.20499992, z: 0}
-  m_ShapePathHash: -948253963
-  m_Mesh: {fileID: 0}
-  m_InstanceId: -1135608

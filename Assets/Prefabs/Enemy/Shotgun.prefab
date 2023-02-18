@@ -15,7 +15,6 @@ GameObject:
   - component: {fileID: 6025363158655360572}
   - component: {fileID: 6025363158655360575}
   - component: {fileID: 6025363158655360574}
-  - component: {fileID: 3989468738642322631}
   m_Layer: 11
   m_Name: Shotgun
   m_TagString: Enemy
@@ -286,37 +285,6 @@ MonoBehaviour:
   attackRange: {x: 8, y: 1.5}
   lookRange: {x: 12, y: 1.5}
   attackCooldown: 0
---- !u!114 &3989468738642322631
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 291746124583240766}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7db70e0ea77f5ac47a8f4565a9406397, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_ShadowGroup: 0
-  m_ComponentVersion: 1
-  m_HasRenderer: 1
-  m_UseRendererSilhouette: 1
-  m_CastsShadows: 1
-  m_SelfShadows: 1
-  m_ApplyToSortingLayers: 297ac6deb3ad739400000000
-  m_ShapePath:
-  - {x: 0.15826797, y: -0.75712585, z: 0}
-  - {x: -0.26955795, y: -0.75727844, z: -0.00000011920929}
-  - {x: -0.48831177, y: -0.47601318, z: -0.00000011920929}
-  - {x: -0.5768547, y: 0.43023682, z: -0.00000011920929}
-  - {x: -0.13031387, y: 0.8223572, z: 0}
-  - {x: 0.2604065, y: 0.8033142, z: 0}
-  - {x: 0.29816055, y: 0.27920532, z: -0.00000011920929}
-  - {x: 0.7842941, y: -0.05355835, z: 0}
-  m_ShapePathHash: 1580230565
-  m_Mesh: {fileID: 0}
-  m_InstanceId: 1537790
 --- !u!1 &4334698101924165233
 GameObject:
   m_ObjectHideFlags: 0

@@ -126,7 +126,6 @@ GameObject:
   - component: {fileID: 9129870341428614329}
   - component: {fileID: 9129870341428614328}
   - component: {fileID: 1664193011}
-  - component: {fileID: -4535266139401842142}
   m_Layer: 11
   m_Name: Flower
   m_TagString: Untagged
@@ -311,34 +310,6 @@ MonoBehaviour:
   playerLayer:
     serializedVersion: 2
     m_Bits: 0
---- !u!114 &-4535266139401842142
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9129870341428614304}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7db70e0ea77f5ac47a8f4565a9406397, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_ShadowGroup: 0
-  m_ComponentVersion: 1
-  m_HasRenderer: 1
-  m_UseRendererSilhouette: 1
-  m_CastsShadows: 1
-  m_SelfShadows: 1
-  m_ApplyToSortingLayers: 297ac6deb3ad739400000000
-  m_ShapePath:
-  - {x: -0.37177753, y: -0.6179013, z: 0}
-  - {x: -0.25517464, y: -0.24582863, z: 0}
-  - {x: 0.0006608963, y: 0.069536686, z: 0}
-  - {x: 0.2536192, y: -0.062369347, z: 0}
-  - {x: 0.25270176, y: -0.61873627, z: 0}
-  m_ShapePathHash: -242097
-  m_Mesh: {fileID: 0}
-  m_InstanceId: 1537866
 --- !u!1 &9129870341503283521
 GameObject:
   m_ObjectHideFlags: 0

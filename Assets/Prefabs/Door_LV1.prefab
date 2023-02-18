@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 2183911979060243539}
   - component: {fileID: 2055548295187780511}
   - component: {fileID: 3796161572409744394}
-  - component: {fileID: -5602660837616527332}
   m_Layer: 0
   m_Name: Door_LV1
   m_TagString: Untagged
@@ -154,30 +153,3 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.31378603, y: 2.8304982}
   m_EdgeRadius: 0
---- !u!114 &-5602660837616527332
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 789812415721829821}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7db70e0ea77f5ac47a8f4565a9406397, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_ShadowGroup: 0
-  m_ComponentVersion: 1
-  m_HasRenderer: 1
-  m_UseRendererSilhouette: 1
-  m_CastsShadows: 1
-  m_SelfShadows: 1
-  m_ApplyToSortingLayers: 297ac6deb3ad739400000000
-  m_ShapePath:
-  - {x: -0.15880385, y: -1.4995655, z: -0.0000000015079449}
-  - {x: -0.16203, y: 1.4960619, z: -0.0000000015079449}
-  - {x: 0.09418688, y: 1.4956913, z: -0.0000000015079449}
-  - {x: 0.09232313, y: -1.5000014, z: -0.0000000015079449}
-  m_ShapePathHash: 442675068
-  m_Mesh: {fileID: 0}
-  m_InstanceId: 1453716
