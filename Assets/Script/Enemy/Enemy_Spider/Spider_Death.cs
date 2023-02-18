@@ -9,7 +9,6 @@ public class Spider_Death : StateMachineBehaviour
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         spider = animator.GetComponent<Spider>();
-        spider.WhenEnemyDead();
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks

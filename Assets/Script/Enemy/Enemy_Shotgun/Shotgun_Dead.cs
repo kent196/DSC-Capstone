@@ -9,7 +9,6 @@ public class Shotgun_Dead : StateMachineBehaviour
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
        shotgun = animator.GetComponent<Shotgun>();
-       shotgun.WhenEnemyDead();
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks

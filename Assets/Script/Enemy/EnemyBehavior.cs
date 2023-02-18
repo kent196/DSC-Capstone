@@ -24,6 +24,7 @@ public class EnemyBehavior : MonoBehaviour
     }
 
     //Components
+    private Collider2D enemyCollider;
     private Rigidbody2D rb;
     protected Animator animator;
     public Rigidbody2D Rb
@@ -80,7 +81,10 @@ public class EnemyBehavior : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if(Health <= 0 && !IsDead)
+        {
+            EnemyDead();
+        }
     }
 
     public void TakeDamage(float dmg)
@@ -91,7 +95,6 @@ public class EnemyBehavior : MonoBehaviour
     
     public void Destroy()
     {
-        IgnoreFireballCollision(false);
         Destroy(gameObject);
     }
 
@@ -170,7 +173,7 @@ public class EnemyBehavior : MonoBehaviour
     {
         Vector2 direction = (to - from).normalized;
         float distance = Vector3.Distance(from, to);
-        RaycastHit2D hitInfo = Physics2D.Raycast(transform.position, direction, distance, ~(1 << 11 | 1 << 14));
+        RaycastHit2D hitInfo = Physics2D.Raycast(transform.position, direction, distance, ~(1 << 11 | 1 << 14 | 1 << 12 | 1 << 16));
         if(hitInfo && hitInfo.transform.tag == tag)
         {
             Debug.DrawRay(transform.position, direction * distance, Color.yellow, 2f);
@@ -204,29 +207,19 @@ public class EnemyBehavior : MonoBehaviour
         }
     }
 
-    public void IgnoreCollsionOf(GameObject o1, GameObject o2, bool isIgnore)
+    public void EnemyDead()
     {
-        Collider2D o1Colllider = o1.GetComponent<Collider2D>();
-        Collider2D o2Colllider = o2.GetComponent<Collider2D>();
-        
-        Physics2D.IgnoreCollision(o1Colllider, o2Colllider, isIgnore);
-    }
-
-    public void IgnorePlayerCollsion(bool isIgnore)
-    {
-        IgnoreCollsionOf(this.gameObject, player, isIgnore);
-    }
-
-    public void IgnoreFireballCollision(bool isIgnore)
-    {
-        Physics2D.IgnoreLayerCollision(11,12,isIgnore);
-    }
-
-    public void WhenEnemyDead()
-    {
-        IgnorePlayerCollsion(true);
-        IgnoreFireballCollision(true);
         isDead = true;
+        animator.SetTrigger("dead");
+        if(enemyCollider != null)
+        {
+            enemyCollider.enabled = false;
+        }
+        if(rb != null)
+        {
+            rb.isKinematic = true;
+            rb.simulated = false;
+        }
     }
 
     public void TakePlayerDamage()

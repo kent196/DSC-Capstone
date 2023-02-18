@@ -80,8 +80,7 @@ AnimatorState:
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions: []
-  m_StateMachineBehaviours:
-  - {fileID: 4105649973467184181}
+  m_StateMachineBehaviours: []
   m_Position: {x: 50, y: 50, z: 0}
   m_IKOnFeet: 0
   m_WriteDefaultValues: 1
@@ -108,7 +107,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fd32462a6fd8f3d44b5efeb501cf6e93, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerLayer: 10
   multiplyLookrange: 3
 --- !u!114 &-4664986256044880059
 MonoBehaviour:
@@ -205,7 +203,7 @@ AnimatorStateMachine:
     m_Position: {x: 0, y: 340, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -6234348664814572201}
-    m_Position: {x: -520, y: 340, z: 0}
+    m_Position: {x: -500, y: 340, z: 0}
   m_ChildStateMachines: []
   m_AnyStateTransitions:
   - {fileID: 2496200055043629157}
@@ -263,12 +261,6 @@ AnimatorController:
     m_DefaultInt: 0
     m_DefaultBool: 0
     m_Controller: {fileID: 0}
-  - m_Name: isDead
-    m_Type: 4
-    m_DefaultFloat: 0
-    m_DefaultInt: 0
-    m_DefaultBool: 0
-    m_Controller: {fileID: 0}
   m_AnimatorLayers:
   - serializedVersion: 5
     m_Name: Base Layer
@@ -294,7 +286,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d427c1347f23e346bc8652c900eb3dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyHealthBar: {fileID: 0}
 --- !u!114 &1135701576718297036
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -367,9 +358,6 @@ AnimatorStateTransition:
   m_Conditions:
   - m_ConditionMode: 1
     m_ConditionEvent: isHit
-    m_EventTreshold: 0
-  - m_ConditionMode: 2
-    m_ConditionEvent: isDead
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -4183821391746622562}

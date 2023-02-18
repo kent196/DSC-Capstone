@@ -18,12 +18,6 @@ public class Spider : EnemyBehavior
         homePos = transform.position;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     void OnDrawGizmos()
     {
         Gizmos.color = Color.yellow;

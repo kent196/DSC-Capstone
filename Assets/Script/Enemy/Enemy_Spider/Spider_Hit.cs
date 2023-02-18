@@ -12,8 +12,6 @@ public class Spider_Hit : StateMachineBehaviour
     {
         spider = animator.GetComponent<Spider>();
         spider.currentLookRange.x = spider.lookRange.x * multiplyLookrange;
-        
-        spider.IgnorePlayerCollsion(true);
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
@@ -33,12 +31,6 @@ public class Spider_Hit : StateMachineBehaviour
     // OnStateExit is called when a transition ends and the state machine finishes evaluating this state
     override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        spider.IgnorePlayerCollsion(false);
-
-        if(spider.Health <= 0)
-        {
-            animator.SetTrigger("dead");
-            animator.SetBool("isDead", true);
-        }
+        
     }
 }

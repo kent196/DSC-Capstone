@@ -9,7 +9,6 @@ public class Sniper_Dead : StateMachineBehaviour
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         sniper = animator.GetComponent<Sniper>();
-        sniper.WhenEnemyDead();
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
