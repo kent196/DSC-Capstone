@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.9" tiledversion="1.9.2" orientation="orthogonal" renderorder="right-down" width="30" height="20" tilewidth="16" tileheight="16" infinite="1" nextlayerid="22" nextobjectid="1428">
+<map version="1.9" tiledversion="1.9.2" orientation="orthogonal" renderorder="right-down" width="30" height="20" tilewidth="16" tileheight="16" infinite="1" nextlayerid="22" nextobjectid="1432">
  <tileset firstgid="1" source="../../Tiled_TileMap/Updated Dark Basic Set.tsx"/>
  <tileset firstgid="353" source="Overworld'sTileSet.tsx"/>
  <layer id="2" name="BackGround_0" width="30" height="20">
@@ -30600,8 +30600,8 @@
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+200,202,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+244,246,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,397,1073742181,575,575,575,575,1073742184,575,575,575,
 575,575,575,575,575,575,575,575,575,575,575,575,575,575,575,575
@@ -35071,7 +35071,6 @@
   <object id="579" x="4928" y="-2272.25">
    <polygon points="0,0 32.125,16.25 -0.25,16.25"/>
   </object>
-  <object id="583" x="4864" y="-3200" width="48" height="64"/>
   <object id="589" x="880" y="-4896" width="560" height="1008"/>
   <object id="590" x="864" y="-4880" width="16" height="992"/>
   <object id="591" x="656" y="-3936" width="16" height="48"/>
@@ -35664,5 +35663,6 @@
   <object id="1423" x="-2560" y="-5440" width="16" height="752"/>
   <object id="1424" x="-2560" y="-5440" width="3504" height="32"/>
   <object id="1426" x="5280" y="-4512" width="96" height="192"/>
+  <object id="1430" x="4864" y="-3152" width="32" height="32"/>
  </objectgroup>
 </map>
