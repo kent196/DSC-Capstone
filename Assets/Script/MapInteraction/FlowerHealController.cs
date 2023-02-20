@@ -24,6 +24,7 @@ public class FlowerHealController : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
+            FindObjectOfType<AudioManager>().Play("Heal");
             anim.SetBool("isUsed", true);
             if (!smoke.isPlaying)
                 smoke.Play();

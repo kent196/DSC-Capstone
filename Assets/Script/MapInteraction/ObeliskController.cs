@@ -29,9 +29,11 @@ public class ObeliskController : MonoBehaviour
     void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Fireball"))
-
         {
-            
+            if(!obeliskOperating)
+            {
+                FindObjectOfType<AudioManager>().Play("Obelisk");
+            }
             anim.SetTrigger("isActivated");
             anim.SetBool("isOperating", true);
             obeliskOperating = true;

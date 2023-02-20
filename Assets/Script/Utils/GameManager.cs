@@ -71,6 +71,7 @@ public class GameManager : MonoBehaviour
             }
             else
             {
+                FindObjectOfType<AudioManager>().Play("Popup");
                 PauseGame();
             }
         }

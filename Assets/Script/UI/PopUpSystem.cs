@@ -26,6 +26,7 @@ public class PopUpSystem : MonoBehaviour
             {
                 if (Input.GetKeyDown(KeyCode.Space))
                 {
+                    FindObjectOfType<AudioManager>().Play("Popup");
                     Time.timeScale = 0;
                     dialogueBox.SetActive(true);
                     dialogueText.text = dialogue;

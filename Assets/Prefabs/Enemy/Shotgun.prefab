@@ -145,7 +145,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: f2b13d23b3c566841a00ca2991286d70, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -316,7 +316,7 @@ MonoBehaviour:
   - {x: 0.7842941, y: -0.05355835, z: 0}
   m_ShapePathHash: 1580230565
   m_Mesh: {fileID: 0}
-  m_InstanceId: 1537790
+  m_InstanceId: 162420
 --- !u!1 &4334698101924165233
 GameObject:
   m_ObjectHideFlags: 0
