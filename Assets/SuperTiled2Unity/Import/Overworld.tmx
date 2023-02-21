@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.9" tiledversion="1.9.2" orientation="orthogonal" renderorder="right-down" width="30" height="20" tilewidth="16" tileheight="16" infinite="1" nextlayerid="22" nextobjectid="1627">
+<map version="1.9" tiledversion="1.9.2" orientation="orthogonal" renderorder="right-down" width="30" height="20" tilewidth="16" tileheight="16" infinite="1" nextlayerid="22" nextobjectid="1629">
  <tileset firstgid="1" source="../../Tiled_TileMap/Updated Dark Basic Set.tsx"/>
  <tileset firstgid="353" source="Overworld'sTileSet.tsx"/>
  <layer id="2" name="BackGround_0" width="30" height="20">
@@ -31733,8 +31733,8 @@
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,223,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,200,201,202,0,0,0,0,0,0,0,0,0,0,0,
-0,0,244,245,246,0,0,0,0,0,0,0,0,0,0,0,
+0,0,200,201,202,0,0,0,0,0,200,201,202,0,0,0,
+0,0,244,245,246,0,0,0,0,0,244,245,246,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
@@ -35148,7 +35148,7 @@
 </chunk>
   </data>
  </layer>
- <objectgroup id="4" name="CollisionMask" locked="1">
+ <objectgroup id="4" name="CollisionMask" locked="1" opacity="0">
   <object id="1432" x="-2560" y="-5440" width="1280" height="1776"/>
   <object id="1459" x="-1056" y="-3664">
    <polygon points="0,0 0,-32 -16,-32 -16,-48 -32,-48 -32,-64 -48,-64 -48,-80 -64,-80 -64,-96 -80,-96 -80,-112 -144,-112 -144,-96 -160,-96 -160,-80 -176,-80 -176,-64 -192,-64 -192,-48 -208,-48 -208,-32 -224,-32 -224,0 0,0"/>
@@ -35346,5 +35346,6 @@
   <object id="1619" x="5776" y="-4512" width="16" height="16"/>
   <object id="1621" x="5856" y="-4592" width="16" height="16"/>
   <object id="1623" x="5936" y="-4672" width="16" height="16"/>
+  <object id="1627" x="3488" y="-2912" width="48" height="32"/>
  </objectgroup>
 </map>

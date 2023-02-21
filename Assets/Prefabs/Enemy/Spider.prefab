@@ -180,7 +180,6 @@ MonoBehaviour:
   playerLayer:
     serializedVersion: 2
     m_Bits: 1024
-  attackAudio: {fileID: 8300000, guid: dc748ffec7e734b4e9f6523273237b77, type: 3}
   moveSpeed: 3
   lookRange: {x: 10, y: 3, z: 1}
   currentLookRange: {x: 0, y: 0, z: 0}
@@ -357,7 +356,7 @@ MonoBehaviour:
   m_NormalMapDistance: 3
   m_NormalMapQuality: 2
   m_UseNormalMap: 0
-  m_ShadowIntensityEnabled: 1
+  m_ShadowIntensityEnabled: 0
   m_ShadowIntensity: 0.5
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75

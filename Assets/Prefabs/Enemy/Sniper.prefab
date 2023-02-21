@@ -61,7 +61,7 @@ MonoBehaviour:
   m_NormalMapDistance: 3
   m_NormalMapQuality: 2
   m_UseNormalMap: 0
-  m_ShadowIntensityEnabled: 1
+  m_ShadowIntensityEnabled: 0
   m_ShadowIntensity: 0.5
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
@@ -431,7 +431,7 @@ MonoBehaviour:
   - {x: 0.34600136, y: -0.5317625, z: 0}
   m_ShapePathHash: 1545961269
   m_Mesh: {fileID: 0}
-  m_InstanceId: 65876
+  m_InstanceId: 58054
 --- !u!1 &8439263192077165200
 GameObject:
   m_ObjectHideFlags: 0

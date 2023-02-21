@@ -12,6 +12,7 @@ TagManager:
   - FlowerProjectile
   - UI
   - Sniper
+  - GameMaster
   layers:
   - Default
   - TransparentFX
