@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Audio;
 
 public class EnemyBehavior : MonoBehaviour
 {
@@ -116,6 +117,7 @@ public class EnemyBehavior : MonoBehaviour
     {
         if(other.CompareTag("Player"))
         {
+            FindObjectOfType<AudioManager>().Play("Dash Hit");
             player = other.gameObject;
             TakeDamage(5);
             animator.SetTrigger("isHit");
@@ -210,6 +212,7 @@ public class EnemyBehavior : MonoBehaviour
     public void EnemyDead()
     {
         isDead = true;
+        FindObjectOfType<AudioManager>().Play("Enemy Dead");
         animator.SetTrigger("dead");
         if(enemyCollider != null)
         {
@@ -225,5 +228,10 @@ public class EnemyBehavior : MonoBehaviour
     public void TakePlayerDamage()
     {
         player.GetComponent<PlayerBehaviour>().TakeDamage(damage);
+    }
+
+    public void PlayAudio(string name)
+    {
+        FindObjectOfType<AudioManager>().Play(name);
     }
 }

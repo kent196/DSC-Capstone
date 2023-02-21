@@ -93,6 +93,7 @@ public class PlayerMovement : MonoBehaviour
 
     private IEnumerator Dash()
     {
+        FindObjectOfType<AudioManager>().Play("Dash");
         GetComponent<PlayerBehaviour>().TakeDamage(10);
 
         Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);

@@ -19,6 +19,7 @@ public class TakeDamageFromWater : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
+            FindObjectOfType<AudioManager>().Play("Water");
             playerBehaviour = other.GetComponent<PlayerBehaviour>();
             isTouchingWater = false;
         }

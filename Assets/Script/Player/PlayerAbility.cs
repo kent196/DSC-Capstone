@@ -7,7 +7,6 @@ public class PlayerAbility : MonoBehaviour
     [SerializeField] private GameObject projectile;
     [SerializeField] private Transform rotatePoint;
     private PlayerBehaviour playerBehaviour;
-    public AudioSource atkSFX;
 
     private Vector2 aimLineStart;
     private Vector2 aimLineEnd;
@@ -30,7 +29,6 @@ public class PlayerAbility : MonoBehaviour
         playerBehaviour = FindObjectOfType<PlayerBehaviour>();
         lr = GetComponent<LineRenderer>();
         attackTimer = 0f;
-        atkSFX = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -41,12 +39,10 @@ public class PlayerAbility : MonoBehaviour
         if (attackTimer < .1f)
         {
             RangeAttack();
-
         }
     }
     void GetDirection()
     {
-
         rotatePosition = rotatePoint.position;
         mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
 
@@ -63,8 +59,6 @@ public class PlayerAbility : MonoBehaviour
             offset = Vector3.zero;
         }
         rotatePoint.rotation = Quaternion.Euler(0, 0, angle);
-
-
     }
     void RangeAttack()
     {
@@ -74,7 +68,6 @@ public class PlayerAbility : MonoBehaviour
         }
         if (Input.GetMouseButton(0))
         {
-
             lr.enabled = true;
             aimLineStart = rotatePoint.position;
             lr.SetPosition(0, aimLineStart);
@@ -94,7 +87,7 @@ public class PlayerAbility : MonoBehaviour
     {
         if (attackTimer < .1f)
         {
-            //atkSFX.Play();
+            FindObjectOfType<AudioManager>().Play("Bullet Fly");
 
             playerBehaviour.TakeDamage(10);
             GameObject newProjectile = Instantiate(projectile, rotatePoint.position + offset , rotatePoint.rotation);

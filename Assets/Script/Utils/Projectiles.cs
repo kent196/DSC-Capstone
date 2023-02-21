@@ -7,9 +7,11 @@ public class Projectiles : MonoBehaviour
     private Rigidbody2D rb;
     private bool hasHit;
     public Animator anim;
+    private AudioManager audioManager;
     // Start is called before the first frame update
     void Start()
     {
+        audioManager = FindObjectOfType<AudioManager>();
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
     }
@@ -34,6 +36,7 @@ public class Projectiles : MonoBehaviour
             anim.Play("Explode");
         }
 
+        audioManager.Play("Bullet Explode");
         hasHit = true;          
         DestroyAnimation();
     }
