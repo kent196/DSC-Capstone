@@ -6,7 +6,7 @@ public class ElevatorSystem : MonoBehaviour
 {
     [SerializeField] private GameObject[] waypoints;
     private int currentWaypointIndex = 1;
-
+    
     // ObeliskController obeliskController;
     // public GameObject obelisk;
 

@@ -126,6 +126,7 @@ GameObject:
   - component: {fileID: 8439263191753831949}
   - component: {fileID: -8858796198761214831}
   - component: {fileID: 2646826637593336606}
+  - component: {fileID: 5705034325793263915}
   m_Layer: 11
   m_Name: Sniper
   m_TagString: Sniper
@@ -388,6 +389,49 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 1024
   attackRadius: 10
+--- !u!114 &5705034325793263915
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8439263191753831941}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7db70e0ea77f5ac47a8f4565a9406397, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ShadowGroup: 0
+  m_ComponentVersion: 1
+  m_HasRenderer: 1
+  m_UseRendererSilhouette: 1
+  m_CastsShadows: 1
+  m_SelfShadows: 0
+  m_ApplyToSortingLayers: 297ac6deb3ad739400000000
+  m_ShapePath:
+  - {x: -0.21753606, y: -0.5257801, z: 0}
+  - {x: -0.21946558, y: -0.4707433, z: 0}
+  - {x: -0.27668285, y: -0.4692763, z: 0}
+  - {x: -0.28255135, y: 0.15424562, z: 0}
+  - {x: -0.22093269, y: 0.15571272, z: 0}
+  - {x: -0.22129947, y: 0.21658313, z: 0}
+  - {x: -0.15454596, y: 0.21791816, z: 0}
+  - {x: -0.15321088, y: 0.4689114, z: 0}
+  - {x: -0.0944678, y: 0.47158158, z: 0}
+  - {x: -0.096513696, y: 0.53125, z: 0}
+  - {x: 0.21934018, y: 0.532585, z: 0}
+  - {x: 0.2206088, y: 0.47024643, z: 0}
+  - {x: 0.2793519, y: 0.46757627, z: 0}
+  - {x: 0.2793519, y: 0.2205882, z: 0}
+  - {x: 0.34477034, y: 0.21925318, z: 0}
+  - {x: 0.34210017, y: 0.15917492, z: 0}
+  - {x: 0.40351346, y: 0.15650487, z: 0}
+  - {x: 0.405695, y: -0.46985805, z: 0}
+  - {x: 0.3465564, y: -0.46824014, z: 0}
+  - {x: 0.34600136, y: -0.5317625, z: 0}
+  m_ShapePathHash: 1545961269
+  m_Mesh: {fileID: 0}
+  m_InstanceId: 65876
 --- !u!1 &8439263192077165200
 GameObject:
   m_ObjectHideFlags: 0

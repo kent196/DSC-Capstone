@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 3221975442712349607}
   - component: {fileID: 119163407}
   - component: {fileID: 844578359}
+  - component: {fileID: 4810246528990340074}
   m_Layer: 0
   m_Name: Obelisk
   m_TagString: Untagged
@@ -147,6 +148,49 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.45648956, y: 0.7625885}
   m_EdgeRadius: 0
+--- !u!114 &4810246528990340074
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1973100495963084581}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7db70e0ea77f5ac47a8f4565a9406397, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ShadowGroup: 0
+  m_ComponentVersion: 1
+  m_HasRenderer: 1
+  m_UseRendererSilhouette: 1
+  m_CastsShadows: 1
+  m_SelfShadows: 0
+  m_ApplyToSortingLayers: 297ac6deb3ad739400000000
+  m_ShapePath:
+  - {x: -0.31265748, y: -0.59403706, z: 0}
+  - {x: -0.31237787, y: -0.343961, z: 0}
+  - {x: -0.1875425, y: -0.34402752, z: 0}
+  - {x: -0.18749285, y: -0.09356475, z: 0}
+  - {x: -0.24999493, y: -0.094031334, z: 0}
+  - {x: -0.24997991, y: 0.15614128, z: 0}
+  - {x: 0.18756539, y: 0.15616345, z: 0}
+  - {x: 0.1875276, y: -0.093809605, z: 0}
+  - {x: 0.12485975, y: -0.093690634, z: 0}
+  - {x: 0.124882996, y: -0.21865988, z: 0}
+  - {x: 0.24997395, y: -0.21864271, z: 0}
+  - {x: 0.24996442, y: -0.5942023, z: 0}
+  - {x: 0.18708724, y: -0.59388065, z: 0}
+  - {x: 0.18784589, y: -0.28127623, z: 0}
+  - {x: 0.12529033, y: -0.2812407, z: 0}
+  - {x: 0.12520236, y: -0.5937784, z: 0}
+  - {x: -0.18765783, y: -0.5936594, z: 0}
+  - {x: -0.18763274, y: -0.4059732, z: 0}
+  - {x: -0.24985653, y: -0.40593195, z: 0}
+  - {x: -0.24996048, y: -0.59367085, z: 0}
+  m_ShapePathHash: 1532905567
+  m_Mesh: {fileID: 0}
+  m_InstanceId: -125594
 --- !u!1 &6865752213676972550
 GameObject:
   m_ObjectHideFlags: 0

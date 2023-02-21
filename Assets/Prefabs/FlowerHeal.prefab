@@ -4825,6 +4825,7 @@ GameObject:
   - component: {fileID: 4412051887312496225}
   - component: {fileID: 4412051887312496224}
   - component: {fileID: 4412051887312496239}
+  - component: {fileID: 8888972527052424550}
   m_Layer: 0
   m_Name: FlowerHeal
   m_TagString: Heal Flower
@@ -4959,3 +4960,48 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   smoke: {fileID: 361207737}
+--- !u!114 &8888972527052424550
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4412051887312496228}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7db70e0ea77f5ac47a8f4565a9406397, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ShadowGroup: 0
+  m_ComponentVersion: 1
+  m_HasRenderer: 1
+  m_UseRendererSilhouette: 1
+  m_CastsShadows: 1
+  m_SelfShadows: 0
+  m_ApplyToSortingLayers: 297ac6deb3ad739400000000
+  m_ShapePath:
+  - {x: -0.31148386, y: -0.5013416, z: 0}
+  - {x: -0.3091421, y: -0.4386785, z: 0}
+  - {x: -0.2501049, y: -0.436666, z: 0}
+  - {x: -0.249434, y: -0.3749454, z: 0}
+  - {x: -0.18771315, y: -0.3742745, z: 0}
+  - {x: -0.18570042, y: -0.18777084, z: 0}
+  - {x: -0.062259197, y: -0.18575788, z: 0}
+  - {x: -0.060246468, y: -0.063658476, z: 0}
+  - {x: 0.00013256073, y: -0.062316656, z: 0}
+  - {x: 0.000477314, y: 0.06135702, z: 0}
+  - {x: -0.063374996, y: 0.06064582, z: 0}
+  - {x: -0.06312418, y: 0.12468743, z: 0}
+  - {x: 0.062152386, y: 0.124581814, z: 0}
+  - {x: 0.06301451, y: -0.059914112, z: 0}
+  - {x: 0.123363495, y: -0.060776472, z: 0}
+  - {x: 0.1255598, y: -0.18815565, z: 0}
+  - {x: 0.06235075, y: -0.18691015, z: 0}
+  - {x: 0.062039375, y: -0.31239462, z: 0}
+  - {x: 0.12524843, y: -0.31239462, z: 0}
+  - {x: 0.12400246, y: -0.43756747, z: 0}
+  - {x: 0.24958801, y: -0.4380579, z: 0}
+  - {x: 0.24948359, y: -0.4996302, z: 0}
+  m_ShapePathHash: 1287401789
+  m_Mesh: {fileID: 0}
+  m_InstanceId: -179920
