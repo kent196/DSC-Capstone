@@ -129,12 +129,12 @@ public class GameManager : MonoBehaviour
         Time.timeScale = 1f;
         GameHasEnded = false;
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        // FindObjectOfType<GameMaster>().LoadGame();
     }
 
     public void Menu()
     {
         {
-
             GameHasEnded = false;
             SceneManager.LoadScene("Start");
         }

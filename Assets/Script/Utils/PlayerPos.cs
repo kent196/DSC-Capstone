@@ -8,16 +8,18 @@ public class PlayerPos : MonoBehaviour
     private GameMaster gameMaster;
     private GameManager gameManager;
 
-    void Start() {
-        gameMaster = GameObject.FindGameObjectWithTag("GameMaster").GetComponent<GameMaster>();
+    void Awake()
+    {
+        gameMaster = GameObject.FindGameObjectWithTag("GameMaster").GetComponent<GameMaster>();  
         transform.position = gameMaster.lastCheckPointPos;
+    }
+
+    void Start() {
+        
     }
 
     void Update()
     {
-        if(GameManager.gameManager.playerHealth.Health <= 0)
-        {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-        }
+
     }
 }

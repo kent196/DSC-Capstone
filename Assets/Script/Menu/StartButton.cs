@@ -7,9 +7,17 @@ using UnityEngine.SceneManagement;
 
 public class StartButton : MonoBehaviour
 {
+    private GameMaster gameMaster;
     private GameManager gamemanager;
     public void StartGame()
     {
+        gameMaster = FindObjectOfType<GameMaster>();
+        if(gameMaster!=null)
+        {
+            Destroy(gameMaster);
+        }
+        
+        Debug.Log("start");
         SceneManager.LoadScene("Map");
         Time.timeScale = 1f;
     }

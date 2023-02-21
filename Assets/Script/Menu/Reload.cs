@@ -16,6 +16,7 @@ public class Reload : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.R))
         {
+            FindObjectOfType<GameMaster>().LoadGame();
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
     }

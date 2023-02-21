@@ -15,6 +15,7 @@ public class CheckPoints : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             gameMaster.lastCheckPointPos = transform.position;
+            gameMaster.SaveGame();
         }
     }
 }
