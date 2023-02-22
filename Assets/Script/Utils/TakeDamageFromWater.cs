@@ -37,7 +37,7 @@ public class TakeDamageFromWater : MonoBehaviour
     {
         if (playerBehaviour != null)
         {
-            playerBehaviour.TakeDamage(5);
+            playerBehaviour.TakeDamage(10);
             yield return new WaitForSeconds(1f);
         }
 

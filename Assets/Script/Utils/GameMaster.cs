@@ -6,7 +6,7 @@ public class GameMaster : MonoBehaviour
 {
     private static GameMaster instance;
     public Vector2 lastCheckPointPos = new Vector2(-46.7f, 192.4f);
-    public float playerHealth = 100f;
+    public float playerHealth = 2000f;
     private ObeliskController[] obelisks;
     // data to save and load
     private Vector2 playerPos;
